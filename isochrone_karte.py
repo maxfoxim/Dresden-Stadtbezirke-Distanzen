@@ -1,10 +1,14 @@
 import pandas as pd
-import requests
 from bs4 import BeautifulSoup as bs
 import openrouteservice as ors  # Für die Berechnung der Distanzen
 import secret_api   # eigene Datei mit API. Dateiinhalt:   api="5b3c....."
-import time
 import folium
+
+""" 
+Ideen:
+Aufteilung nach Fahrrad, Auto
+Überlapp aller Ziele 
+"""
 
 # Gewünschte Zieladressen
 Ziel_Adressen={
@@ -21,12 +25,6 @@ client = ors.Client(key=secret_api.api)
 
 m = folium.Map(location=[51.05885076550623, 13.766713420144118], tiles='OpenStreetMap', zoom_start=13)
 
-
-# Some coordinate in Berlin
-coordinate = [[13.384116, 52.533558]]
-coordinate = list(Ziel_Adressen.values())
-
-print(coordinate)
 farben = ["00ff00","lightgreen","red","orange","pink","darkgreen"]
 # Also create a Popup with Population count within isochrones
 i=0
@@ -36,10 +34,8 @@ for coordi in Ziel_Adressen:
     locations=[Ziel_Adressen[coordi][::-1]],
     profile='driving-car',  #'foot-walking',  'driving-car' 'cycling-regular'
     range=[600,900,1200,1500,1800],  # Seconds
-    validate=False,
-    #attributes=['total_pop']
+    validate=False
     )
-    #print("iso",iso)
 
     fg = folium.FeatureGroup(name=coordi, control=True, overlay=True).add_to(m)
 
