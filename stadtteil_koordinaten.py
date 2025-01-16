@@ -6,6 +6,7 @@ import secret_api   # eigene Datei mit API. Dateiinhalt:   api="5b3c....."
 import time
 import codecs
 import json
+import openpyxl
 
 Benutze_wikipedia = False
 
@@ -26,6 +27,7 @@ def distanzen_berechnen(Start,Ende,datei):
 
 Namen_arr,URL_arr=[],[]
 Long_arr,Lat_arr=[],[]
+gemeinde = []
 
 if Benutze_wikipedia:
     tables=pd.read_csv("wikipedia_download_liste.csv")
@@ -86,15 +88,19 @@ if Benutze_wikipedia:
         print("----------------------")
         PD_Adressen=pd.DataFrame(data={"Name":Namen_arr,"Lat":Lat_arr,"Long":Long_arr,"URL":URL_arr})
 
-else:
+else: #Berechne mit OVerpass Daten
     with codecs.open("stadtteil_zentrum.geojson", 'r', encoding='utf-8') as f:
         stadtteile_overpass=json.load(f)
     
     for stadtteil in stadtteile_overpass["features"]:
         Namen_arr.append(stadtteil["properties"]["name"])
-        Lat_arr.append(stadtteil["geometry"]["coordinates"][0])
-        Long_arr.append(stadtteil["geometry"]["coordinates"][1])
-    PD_Adressen=pd.DataFrame(data={"Name":Namen_arr,"Lat":Lat_arr,"Long":Long_arr})
+        Lat_arr.append(stadtteil["geometry"]["coordinates"][1])
+        Long_arr.append(stadtteil["geometry"]["coordinates"][0])
+        try:
+            gemeinde.append(stadtteil["properties"]["is_in"])
+        except:
+            gemeinde.append("-")
+    PD_Adressen=pd.DataFrame(data={"Name":Namen_arr,"Lat":Lat_arr,"Long":Long_arr,"Gemeinde":gemeinde})
 
 ### Distanzen bestimmen
 print("\n\n\n-----------------------------")
@@ -114,10 +120,10 @@ for Ziele in Ziel_Adressen:
      PD_Adressen[Ziele+"_Distanz"]=0
      PD_Adressen[Ziele+"_Dauer"]=0
 
-
+counter=1
 for index,row in PD_Adressen.iterrows(): # die Gebiete durchgehen
     for Ziele in Ziel_Adressen: # die Ziele durchgehen
-        print(index,"Von",Ziele," nach ",row["Name"])
+        print(counter,")    ",index,"Von",Ziele," nach ",row["Name"])
         Ende=list(reversed(Ziel_Adressen[Ziele]))
         Start=[row["Long"],row["Lat"]]
         print("GPS: Von",Start," nach ",Ende)
@@ -131,9 +137,12 @@ for index,row in PD_Adressen.iterrows(): # die Gebiete durchgehen
         print("")
         # F+r die API-Begrenzungen von openrouteservice. 40/min
         time.sleep(1.5)
+        
+        counter = counter+1
 
     #Zwischenspeichern
-    if index%50==0:
+    if counter%5==0:
+        print("Neu gespeichert.")
         PD_Adressen.to_csv("Gebiets_Adresse.csv")
         PD_Adressen.to_excel("Gebiets_Adresse.xlsx")
 
