@@ -1,0 +1,6034 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2025-01-16T13:07:44Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/21528555",
+        "is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Podemus",
+        "place": "suburb",
+        "wikidata": "Q2100231",
+        "wikipedia": "de:Podemus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6266098,
+          51.0611175
+        ]
+      },
+      "id": "node/21528555"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/25322920",
+        "name": "Weißig",
+        "place": "suburb",
+        "population": "864",
+        "wikidata": "Q6385",
+        "wikipedia": "de:Weißig (Freital)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6118402,
+          51.0016398
+        ]
+      },
+      "id": "node/25322920"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/25322927",
+        "name": "Kesselsdorf",
+        "place": "suburb",
+        "population": "3407",
+        "wikidata": "Q315948",
+        "wikipedia": "de:Kesselsdorf"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5942849,
+          51.0322245
+        ]
+      },
+      "id": "node/25322927"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/25322931",
+        "is_in": "Gorbitz,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Steinbach",
+        "openGeoDB:auto_update": "population,is_in",
+        "openGeoDB:community_identification_number": "14262000",
+        "openGeoDB:is_in": "Gorbitz,Dresden,Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "27384",
+        "openGeoDB:layer": "9",
+        "openGeoDB:license_plate_code": "DD",
+        "openGeoDB:loc_id": "27371",
+        "openGeoDB:name": "Steinbach",
+        "openGeoDB:postal_codes": "01156,01462",
+        "openGeoDB:sort_name": "STEINBACH",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "opengeodb:lat": "51.0439184",
+        "opengeodb:lon": "13.6029969",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6028003,
+          51.0437651
+        ]
+      },
+      "id": "node/25322931"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/25322935",
+        "is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Pennrich",
+        "openGeoDB:auto_update": "population,is_in",
+        "openGeoDB:community_identification_number": "14262000",
+        "openGeoDB:is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "15827",
+        "openGeoDB:layer": "9",
+        "openGeoDB:license_plate_code": "DD",
+        "openGeoDB:loc_id": "27369",
+        "openGeoDB:name": "Pennrich",
+        "openGeoDB:postal_codes": "01156,01462",
+        "openGeoDB:sort_name": "PENNRICH",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "opengeodb:lat": "51.0447295",
+        "opengeodb:lon": "13.6252889",
+        "place": "suburb",
+        "wikidata": "Q8967",
+        "wikipedia": "de:Pennrich"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6236509,
+          51.0441703
+        ]
+      },
+      "id": "node/25322935"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/25322939",
+        "is_in": "Dresden,Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Gompitz",
+        "openGeoDB:auto_update": "population,is_in",
+        "openGeoDB:community_identification_number": "14262000",
+        "openGeoDB:is_in": "Dresden,Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "15827",
+        "openGeoDB:layer": "8",
+        "openGeoDB:license_plate_code": "DD",
+        "openGeoDB:loc_id": "27366",
+        "openGeoDB:name": "Gompitz",
+        "openGeoDB:postal_codes": "01156",
+        "openGeoDB:sort_name": "GOMPITZ",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "opengeodb:lat": "51.0435315",
+        "opengeodb:lon": "13.6377166",
+        "place": "suburb",
+        "wikidata": "Q1536934",
+        "wikipedia": "de:Gompitz (Ortsteil)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6377166,
+          51.0435315
+        ]
+      },
+      "id": "node/25322939"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/25323581",
+        "is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Unkersdorf",
+        "openGeoDB:auto_update": "population,is_in",
+        "openGeoDB:community_identification_number": "14262000",
+        "openGeoDB:is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "27376",
+        "openGeoDB:layer": "9",
+        "openGeoDB:license_plate_code": "DD",
+        "openGeoDB:loc_id": "27373",
+        "openGeoDB:name": "Unkersdorf",
+        "openGeoDB:postal_codes": "01156,01462",
+        "openGeoDB:sort_name": "UNKERSDORF",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "opengeodb:lat": "51.0569435",
+        "opengeodb:lon": "13.5912553",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5915327,
+          51.0564054
+        ]
+      },
+      "id": "node/25323581"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/25323582",
+        "name": "Rennersdorf",
+        "place": "suburb",
+        "wikidata": "Q1448972",
+        "wikipedia": "de:Rennersdorf (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6085307,
+          51.069234
+        ]
+      },
+      "id": "node/25323582"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/25323583",
+        "name": "Brabschütz",
+        "place": "suburb",
+        "wikidata": "Q896514",
+        "wikipedia": "de:Brabschütz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.622591,
+          51.0697817
+        ]
+      },
+      "id": "node/25323583"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/25454502",
+        "image": "http://commons.wikimedia.org/wiki/File:2016_Wurgwitz_Wanderwegweiser_Altfrankener_Weg.jpg",
+        "name": "Pesterwitz",
+        "place": "suburb",
+        "population": "3000",
+        "website": "https://www.freital.de/showobject.phtml?La=1&object=tx%7C530.948.1&NavID=530.17.1",
+        "wikidata": "Q6366",
+        "wikipedia": "de:Pesterwitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6539668,
+          51.0281105
+        ]
+      },
+      "id": "node/25454502"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/26785104",
+        "name": "Paulsdorf",
+        "place": "suburb",
+        "population": "698",
+        "source": "2015 http://www.dippoldiswalde.de/inhalte/dippoldiswalde/_inhalt/dippoldiswalde/zahlen_fakten/statistiken/statistiken"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6450675,
+          50.9164842
+        ]
+      },
+      "id": "node/26785104"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/27453044",
+        "ele": "146",
+        "name": "Bad Schandau",
+        "name:ar": "باد شاندو",
+        "name:fa": "باد شاندو",
+        "name:hsb": "Žandawa",
+        "name:ru": "Бад-Шандау",
+        "name:sr": "Бад Шандау",
+        "name:ur": "باد شاندو",
+        "openGeoDB:auto_update": "population,is_in",
+        "openGeoDB:combination_of_public_administration": "Verwaltungsgemeinschaft Bad Schandau",
+        "openGeoDB:community_identification_number": "14287020",
+        "openGeoDB:is_in": "Sächsische Schweiz,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "487",
+        "openGeoDB:layer": "6",
+        "openGeoDB:license_plate_code": "PIR",
+        "openGeoDB:loc_id": "13986",
+        "openGeoDB:name": "Bad Schandau",
+        "openGeoDB:population": "3190",
+        "openGeoDB:postal_codes": "01814",
+        "openGeoDB:sort_name": "BAD SCHANDAU",
+        "openGeoDB:telephone_area_code": "035022",
+        "openGeoDB:type": "Stadt",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "opengeodb:lat": "50.9187202",
+        "opengeodb:lon": "14.15485",
+        "place": "town",
+        "population": "3409",
+        "population:date": "2023-12-31",
+        "source:population": "wikipedia",
+        "website": "https://www.bad-schandau.de",
+        "wikidata": "Q6406",
+        "wikipedia": "de:Bad Schandau"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1534018,
+          50.918091
+        ]
+      },
+      "id": "node/27453044"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/29141137",
+        "amenity": "vending_machine",
+        "bin": "yes",
+        "fee": "no",
+        "is_in": "Dresden,Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Gorbitz",
+        "openGeoDB:auto_update": "population,is_in",
+        "openGeoDB:community_identification_number": "14262000",
+        "openGeoDB:is_in": "Dresden,Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "15827",
+        "openGeoDB:layer": "8",
+        "openGeoDB:license_plate_code": "DD",
+        "openGeoDB:loc_id": "27384",
+        "openGeoDB:name": "Gorbitz",
+        "openGeoDB:postal_codes": "01067,01069,01097,01099,01109,01127,01129,01139,01157,01159,01169,01187,01189,01217,01219,01237,01239,01257,01259,01277,01279,01307,01309,01324,01326,01108,01156,01328,01462,01465,01478",
+        "openGeoDB:sort_name": "GORBITZ",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "opengeodb:lat": "51.0451872",
+        "opengeodb:lon": "13.6716703",
+        "place": "suburb",
+        "vending": "excrement_bags",
+        "wikidata": "Q8915",
+        "wikipedia": "de:Gorbitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6716625,
+          51.045189
+        ]
+      },
+      "id": "node/29141137"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/29141141",
+        "is_in": "Dresden,Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Altfranken",
+        "openGeoDB:auto_update": "population,is_in",
+        "openGeoDB:community_identification_number": "14262000",
+        "openGeoDB:is_in": "Dresden,Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "15827",
+        "openGeoDB:layer": "9",
+        "openGeoDB:license_plate_code": "DD",
+        "openGeoDB:loc_id": "27386",
+        "openGeoDB:name": "Altfranken",
+        "openGeoDB:postal_codes": "01156,01462",
+        "openGeoDB:sort_name": "ALTFRANKEN",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "opengeodb:lat": "51.0340852",
+        "opengeodb:lon": "13.6454145",
+        "place": "suburb",
+        "wikidata": "Q8888",
+        "wikipedia": "de:Altfranken"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6454145,
+          51.0340852
+        ]
+      },
+      "id": "node/29141141"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/29141148",
+        "is_in": "Dresden,Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Cotta",
+        "openGeoDB:auto_update": "population,is_in",
+        "openGeoDB:community_identification_number": "14262000",
+        "openGeoDB:is_in": "Dresden,Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "15827",
+        "openGeoDB:layer": "9",
+        "openGeoDB:license_plate_code": "DD",
+        "openGeoDB:loc_id": "27383",
+        "openGeoDB:name": "Cotta",
+        "openGeoDB:postal_codes": "01157,01159",
+        "openGeoDB:sort_name": "COTTA",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "opengeodb:lat": "51.0583154",
+        "opengeodb:lon": "13.6860619",
+        "place": "suburb",
+        "wikidata": "Q8899",
+        "wikipedia": "de:Cotta (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6824944,
+          51.0577378
+        ]
+      },
+      "id": "node/29141148"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/29141153",
+        "name": "Friedrichstadt",
+        "place": "suburb",
+        "wikidata": "Q8909",
+        "wikipedia": "de:Friedrichstadt (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.714757,
+          51.0588443
+        ]
+      },
+      "id": "node/29141153"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/29838787",
+        "name": "Wilsdruff",
+        "openGeoDB:auto_update": "population,is_in",
+        "openGeoDB:community_identification_number": "14290450",
+        "openGeoDB:is_in": "Weißeritzkreis,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "491",
+        "openGeoDB:layer": "6",
+        "openGeoDB:license_plate_code": "DW",
+        "openGeoDB:loc_id": "26205",
+        "openGeoDB:name": "Wilsdruff",
+        "openGeoDB:population": "13708",
+        "openGeoDB:postal_codes": "01723",
+        "openGeoDB:sort_name": "WILSDRUFF",
+        "openGeoDB:telephone_area_code": "035204",
+        "openGeoDB:type": "Stadt",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "opengeodb:lat": "51.0524125",
+        "opengeodb:lon": "13.5362765",
+        "place": "town",
+        "population": "13708",
+        "wikidata": "Q8248",
+        "wikipedia": "de:Wilsdruff"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5362765,
+          51.0524125
+        ]
+      },
+      "id": "node/29838787"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/29840599",
+        "alt_name": "Grumbach (Wilsdruff)",
+        "name": "Grumbach",
+        "place": "suburb",
+        "population": "1680",
+        "postal_code": "01723",
+        "wikidata": "Q504903",
+        "wikipedia": "de:Grumbach (Wilsdruff)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5445044,
+          51.0314791
+        ]
+      },
+      "id": "node/29840599"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/29840712",
+        "is_in": "Kamenz,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "loc_name": "Affendorf-Gorilla",
+        "name": "Ottendorf-Okrilla",
+        "name:hsb": "Woćicy-Okrila",
+        "note": "\"town\" im Sinne der Bedeutung",
+        "openGeoDB:auto_update": "population,is_in",
+        "openGeoDB:community_identification_number": "14292415",
+        "openGeoDB:is_in": "Bautzen,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "263",
+        "openGeoDB:layer": "6",
+        "openGeoDB:license_plate_code": "BZ",
+        "openGeoDB:loc_id": "22249",
+        "openGeoDB:name": "Ottendorf-Okrilla",
+        "openGeoDB:population": "10273",
+        "openGeoDB:postal_codes": "01458",
+        "openGeoDB:sort_name": "OTTENDORF-OKRILLA",
+        "openGeoDB:telephone_area_code": "035205",
+        "openGeoDB:type": "Gemeinde",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "opengeodb:lat": "51.1885415",
+        "opengeodb:lon": "13.8380191",
+        "place": "town",
+        "population": "10273",
+        "wikidata": "Q93276",
+        "wikipedia": "de:Ottendorf-Okrilla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8361238,
+          51.182698
+        ]
+      },
+      "id": "node/29840712"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/29927546",
+        "ele": "118",
+        "name": "Pirna",
+        "name:ar": "بيرنا",
+        "name:azb": "پیرنا",
+        "name:ba": "Пирна",
+        "name:be": "Пірна",
+        "name:bg": "Пирна",
+        "name:ce": "Пирна",
+        "name:de": "Pirna",
+        "name:es": "Pirna",
+        "name:fa": "پیرنا",
+        "name:fr": "Pirna",
+        "name:hsb": "Pěrno",
+        "name:kk": "Пирна",
+        "name:ky": "Пирна",
+        "name:mk": "Пирна",
+        "name:ru": "Пирна",
+        "name:sr": "Пирна",
+        "name:tt": "Пирна",
+        "name:uk": "Пірна",
+        "name:ur": "پرنا",
+        "old_name:fr": "Pirne",
+        "openGeoDB:loc_id": "22468",
+        "place": "town",
+        "population": "37645",
+        "postal_code": "01796",
+        "wikidata": "Q6477",
+        "wikipedia": "de:Pirna"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9386643,
+          50.9616923
+        ]
+      },
+      "id": "node/29927546"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/29954687",
+        "is_in": "Dürrröhrsdorf-Dittersbach",
+        "name": "Wünschendorf",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9542244,
+          51.0174197
+        ]
+      },
+      "id": "node/29954687"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/29954688",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Eschdorf",
+        "place": "suburb",
+        "postal_code": "01328"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9421865,
+          51.0367904
+        ]
+      },
+      "id": "node/29954688"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/29954689",
+        "name": "Rossendorf",
+        "place": "suburb",
+        "wikidata": "Q2167680",
+        "wikipedia": "de:Rossendorf (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9390639,
+          51.0570468
+        ]
+      },
+      "id": "node/29954689"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/30185829",
+        "name": "Kleinopitz",
+        "place": "suburb",
+        "population": "530",
+        "wikidata": "Q1746972",
+        "wikipedia": "de:Kleinopitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5917025,
+          51.0044794
+        ]
+      },
+      "id": "node/30185829"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/30221331",
+        "name": "Großopitz",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5912331,
+          50.9985136
+        ]
+      },
+      "id": "node/30221331"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/30226976",
+        "name": "Tharandt",
+        "name:ar": "تارانت",
+        "name:de": "Tharandt",
+        "name:fa": "تارانت",
+        "openGeoDB:combination_of_public_administration": "Verwaltungsgemeinschaft Tharandt",
+        "openGeoDB:community_identification_number": "14290440",
+        "openGeoDB:layer": "6",
+        "openGeoDB:loc_id": "24930",
+        "openGeoDB:name": "Tharandt",
+        "openGeoDB:population": "5700",
+        "openGeoDB:postal_codes": "01737",
+        "openGeoDB:sort_name": "THARANDT",
+        "openGeoDB:telephone_area_code": "035203",
+        "openGeoDB:type": "Stadt",
+        "opengeodb:lat": "50.9853845",
+        "opengeodb:lon": "13.5795286",
+        "place": "town",
+        "population": "5700",
+        "postal_code": "01737",
+        "wikidata": "Q8245",
+        "wikipedia": "de:Tharandt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5794907,
+          50.9853391
+        ]
+      },
+      "id": "node/30226976"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/30423318",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Südvorstadt",
+        "place": "suburb",
+        "wikidata": "Q2381672",
+        "wikipedia": "de:Südvorstadt (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7305097,
+          51.0354839
+        ]
+      },
+      "id": "node/30423318"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/30423320",
+        "is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Strehlen",
+        "place": "suburb",
+        "wikidata": "Q1336962",
+        "wikipedia": "de:Strehlen (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7622097,
+          51.0272848
+        ]
+      },
+      "id": "node/30423320"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/30709423",
+        "is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Wilschdorf",
+        "place": "suburb",
+        "wikidata": "Q2582505",
+        "wikipedia": "de:Wilschdorf (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7201701,
+          51.1202022
+        ]
+      },
+      "id": "node/30709423"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/30782470",
+        "name": "Langebrück",
+        "openGeoDB:auto_update": "population,is_in",
+        "openGeoDB:community_identification_number": "14262000",
+        "openGeoDB:is_in": "Dresden,Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "15827",
+        "openGeoDB:layer": "8",
+        "openGeoDB:license_plate_code": "DD,DD",
+        "openGeoDB:loc_id": "13348",
+        "openGeoDB:name": "Langebrück",
+        "openGeoDB:postal_codes": "01465",
+        "openGeoDB:sort_name": "LANGEBRUECK",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "opengeodb:lat": "51.1313966",
+        "opengeodb:lon": "13.8409276",
+        "place": "suburb",
+        "postal_code": "01465",
+        "wikidata": "Q1804939",
+        "wikipedia": "de:Langebrück"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8409193,
+          51.1313939
+        ]
+      },
+      "id": "node/30782470"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31352684",
+        "is_in": "Kreischa",
+        "name": "Bärenklause",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7657138,
+          50.968738
+        ]
+      },
+      "id": "node/31352684"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31352721",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Plauen",
+        "place": "suburb",
+        "postal_code": "01187",
+        "wikidata": "Q8949",
+        "wikipedia": "de:Plauen (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7098359,
+          51.0277699
+        ]
+      },
+      "id": "node/31352721"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31518191",
+        "is_in": "Pulsnitz",
+        "name": "Friedersdorf",
+        "place": "suburb",
+        "wikidata": "Q59080856",
+        "wikipedia": "de:Friedersdorf (Pulsnitz)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0035848,
+          51.2023272
+        ]
+      },
+      "id": "node/31518191"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31518193",
+        "name": "Pulsnitz",
+        "name:hsb": "Połčnica",
+        "name:ru": "Пульсниц",
+        "old_name:pl": "Półcznica",
+        "openGeoDB:combination_of_public_administration": "Verwaltungsgemeinschaft Pulsnitz",
+        "openGeoDB:community_identification_number": "14292430",
+        "openGeoDB:loc_id": "22682",
+        "openGeoDB:telephone_area_code": "035955",
+        "place": "town",
+        "population": "7610",
+        "postal_code": "01896",
+        "wikidata": "Q81743",
+        "wikipedia": "de:Pulsnitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0139733,
+          51.1825771
+        ]
+      },
+      "id": "node/31518193"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31518284",
+        "is_in": "Großröhrsdorf",
+        "name": "Kleinröhrsdorf",
+        "place": "suburb",
+        "wikidata": "Q160601"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9757571,
+          51.1288759
+        ]
+      },
+      "id": "node/31518284"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31589300",
+        "name": "Schönborn",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8654659,
+          51.1454972
+        ]
+      },
+      "id": "node/31589300"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31589310",
+        "is_in": "Lichtenberg",
+        "name": "Kleindittmannsdorf",
+        "name:de": "Kleindittmannsdorf",
+        "name:hsb": "Dźětmarkecy",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9349467,
+          51.175117
+        ]
+      },
+      "id": "node/31589310"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31603284",
+        "is_in": "Arnsdorf",
+        "name": "Wallroda",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.95687,
+          51.1141427
+        ]
+      },
+      "id": "node/31603284"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31603287",
+        "is_in": "Arnsdorf",
+        "name": "Fischbach",
+        "place": "suburb",
+        "wikidata": "Q1419738",
+        "wikipedia": "de:Fischbach (Arnsdorf)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0172773,
+          51.0862805
+        ]
+      },
+      "id": "node/31603287"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31603295",
+        "name": "Weißig",
+        "place": "suburb",
+        "wikidata": "Q1760584",
+        "wikipedia": "de:Weißig (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8846225,
+          51.0611241
+        ]
+      },
+      "id": "node/31603295"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31603306",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Gönnsdorf",
+        "place": "suburb",
+        "wikidata": "Q1559387",
+        "wikipedia": "de:Gönnsdorf"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.86893,
+          51.0482056
+        ]
+      },
+      "id": "node/31603306"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31603308",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Cunnersdorf",
+        "place": "suburb",
+        "wikidata": "Q1143995",
+        "wikipedia": "de:Cunnersdorf (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8779892,
+          51.0434199
+        ]
+      },
+      "id": "node/31603308"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31603314",
+        "name": "Pappritz",
+        "place": "suburb",
+        "postal_code": "01328",
+        "wikidata": "Q8966",
+        "wikipedia": "de:Pappritz (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8539764,
+          51.038152
+        ]
+      },
+      "id": "node/31603314"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31603316",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Helfenberg",
+        "place": "suburb",
+        "wikidata": "Q1602090",
+        "wikipedia": "de:Helfenberg (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8651519,
+          51.0371873
+        ]
+      },
+      "id": "node/31603316"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31603318",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Rockau",
+        "place": "suburb",
+        "wikidata": "Q1697072",
+        "wikipedia": "de:Rockau (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8648317,
+          51.0278281
+        ]
+      },
+      "id": "node/31603318"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31603319",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Malschendorf",
+        "place": "suburb",
+        "wikidata": "Q1605903",
+        "wikipedia": "de:Malschendorf"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8829907,
+          51.026096
+        ]
+      },
+      "id": "node/31603319"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31603321",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Borsberg",
+        "place": "suburb",
+        "wikidata": "Q894174",
+        "wikipedia": "de:Borsberg (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8958848,
+          51.0127446
+        ]
+      },
+      "id": "node/31603321"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31603323",
+        "is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Zaschendorf",
+        "place": "suburb",
+        "wikidata": "Q148183",
+        "wikipedia": "de:Zaschendorf (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9119487,
+          51.0179808
+        ]
+      },
+      "id": "node/31603323"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31603324",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Schullwitz",
+        "place": "suburb",
+        "postal_code": "01328",
+        "website": "https://www.schullwitz.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.920996,
+          51.040159
+        ]
+      },
+      "id": "node/31603324"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31603329",
+        "name": "Pratzschwitz",
+        "place": "suburb",
+        "wikidata": "Q1272141",
+        "wikipedia": "de:Pratzschwitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8972031,
+          50.9680121
+        ]
+      },
+      "id": "node/31603329"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31603330",
+        "is_in": "Pirna",
+        "name": "Bonnewitz",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9444764,
+          51.0060776
+        ]
+      },
+      "id": "node/31603330"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31603332",
+        "is_in": "Pirna",
+        "name": "Jessen",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9459917,
+          50.991008
+        ]
+      },
+      "id": "node/31603332"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31603333",
+        "is_in": "Pirna",
+        "name": "Liebethal",
+        "place": "suburb",
+        "wikidata": "Q1823888",
+        "wikipedia": "de:Liebethal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9585538,
+          50.9986432
+        ]
+      },
+      "id": "node/31603333"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31603335",
+        "is_in": "Pirna",
+        "name": "Zatzschke",
+        "place": "suburb",
+        "wikidata": "Q148367",
+        "wikipedia": "de:Zatzschke"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9588033,
+          50.9787264
+        ]
+      },
+      "id": "node/31603335"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31603337",
+        "is_in": "Pirna",
+        "name": "Copitz",
+        "name:ar": "كوبتس",
+        "place": "suburb",
+        "wikidata": "Q691655",
+        "wikipedia": "de:Copitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9306563,
+          50.9685807
+        ]
+      },
+      "id": "node/31603337"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31603340",
+        "is_in": "Pirna",
+        "name": "Mockethal",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9587007,
+          50.9736734
+        ]
+      },
+      "id": "node/31603340"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31603518",
+        "is_in": "Lohmen",
+        "name": "Daube",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9771392,
+          50.9933535
+        ]
+      },
+      "id": "node/31603518"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31603556",
+        "is_in": "Stadt Wehlen",
+        "name": "Dorf Wehlen",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0051103,
+          50.960812
+        ]
+      },
+      "id": "node/31603556"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31603558",
+        "is_in": "Struppen",
+        "name": "Ebenheit",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9799841,
+          50.9458244
+        ]
+      },
+      "id": "node/31603558"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31603561",
+        "is_in": "Dürrröhrsdorf-Dittersbach",
+        "name": "Elbersdorf",
+        "place": "suburb",
+        "wikidata": "Q572288",
+        "wikipedia": "de:Elbersdorf (Dürrröhrsdorf-Dittersbach)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9886496,
+          51.024445
+        ]
+      },
+      "id": "node/31603561"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31608615",
+        "is_in": "Heidenau",
+        "name": "Wölkau",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8309315,
+          50.9739442
+        ]
+      },
+      "id": "node/31608615"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31608616",
+        "is_in": "Dohna",
+        "name": "Bosewitz",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8304865,
+          50.9660395
+        ]
+      },
+      "id": "node/31608616"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31608623",
+        "is_in": "Kreischa",
+        "name": "Kautzsch",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7658578,
+          50.9616519
+        ]
+      },
+      "id": "node/31608623"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31608638",
+        "is_in": "Rabenau,Sächsische Schweiz-Osterzgebirge,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Siedlung Waldfrieden",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6226923,
+          50.9640422
+        ]
+      },
+      "id": "node/31608638"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/60116879",
+        "name": "Stolpen",
+        "name:hsb": "Stołpin",
+        "openGeoDB:auto_update": "population,is_in",
+        "openGeoDB:community_identification_number": "14287390",
+        "openGeoDB:is_in": "Sächsische Schweiz,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "487",
+        "openGeoDB:layer": "6",
+        "openGeoDB:license_plate_code": "PIR",
+        "openGeoDB:loc_id": "24645",
+        "openGeoDB:name": "Stolpen",
+        "openGeoDB:population": "6225",
+        "openGeoDB:postal_codes": "01833",
+        "openGeoDB:sort_name": "STOLPEN",
+        "openGeoDB:telephone_area_code": "035973",
+        "openGeoDB:type": "Stadt",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "opengeodb:lat": "51.0496565",
+        "opengeodb:lon": "14.0813899",
+        "place": "town",
+        "population": "5540",
+        "population:date": "2023-12-31",
+        "source:population": "wikipedia",
+        "wikidata": "Q8243",
+        "wikipedia": "de:Stolpen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0830003,
+          51.0492329
+        ]
+      },
+      "id": "node/60116879"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/64875875",
+        "is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Striesen",
+        "name:hsb": "Strěžin",
+        "openGeoDB:auto_update": "population",
+        "openGeoDB:community_identification_number": "14262000",
+        "openGeoDB:is_in": "Dresden,Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "15827",
+        "openGeoDB:layer": "8",
+        "openGeoDB:license_plate_code": "DD",
+        "openGeoDB:loc_id": "27378",
+        "openGeoDB:name": "Striesen",
+        "openGeoDB:postal_codes": "01277",
+        "openGeoDB:sort_name": "STRIESEN",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "opengeodb:lat": "51.0429273",
+        "opengeodb:lon": "13.7743819",
+        "place": "suburb",
+        "wikidata": "Q8954",
+        "wikipedia": "de:Striesen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7860506,
+          51.0434696
+        ]
+      },
+      "id": "node/64875875"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/64878310",
+        "is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Gruna",
+        "openGeoDB:auto_update": "population",
+        "openGeoDB:community_identification_number": "14262000",
+        "openGeoDB:is_in": "Dresden,Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "15827",
+        "openGeoDB:layer": "9",
+        "openGeoDB:license_plate_code": "DD",
+        "openGeoDB:loc_id": "27380",
+        "openGeoDB:name": "Gruna",
+        "openGeoDB:postal_codes": "01219,01277,01309",
+        "openGeoDB:sort_name": "GRUNA",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "opengeodb:lat": "51.0332193",
+        "opengeodb:lon": "13.7865698",
+        "place": "suburb",
+        "wikidata": "Q1550409",
+        "wikipedia": "de:Gruna (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7864783,
+          51.0332929
+        ]
+      },
+      "id": "node/64878310"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/64879280",
+        "name": "Leuben",
+        "place": "suburb",
+        "wikidata": "Q8936",
+        "wikipedia": "de:Leuben"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8270795,
+          51.0106334
+        ]
+      },
+      "id": "node/64879280"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/64881300",
+        "name": "Tolkewitz",
+        "name:hsb": "Tołkecy",
+        "openGeoDB:auto_update": "population",
+        "openGeoDB:community_identification_number": "14262000",
+        "openGeoDB:is_in": "Johannstadt,Dresden,Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "27376",
+        "openGeoDB:layer": "9",
+        "openGeoDB:license_plate_code": "DD",
+        "openGeoDB:loc_id": "27379",
+        "openGeoDB:name": "Tolkewitz",
+        "openGeoDB:postal_codes": "01277,01279",
+        "openGeoDB:sort_name": "TOLKEWITZ",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "opengeodb:lat": "51.0331848",
+        "opengeodb:lon": "13.8216437",
+        "place": "suburb",
+        "wikidata": "Q2439280",
+        "wikipedia": "de:Tolkewitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8223508,
+          51.0319811
+        ]
+      },
+      "id": "node/64881300"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/64882047",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Laubegast",
+        "place": "suburb",
+        "wikidata": "Q8933",
+        "wikipedia": "de:Laubegast"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8379982,
+          51.0233708
+        ]
+      },
+      "id": "node/64882047"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/64884264",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Dobritz",
+        "place": "suburb",
+        "wikidata": "Q1233447",
+        "wikipedia": "de:Dobritz (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.811801,
+          51.0156278
+        ]
+      },
+      "id": "node/64884264"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/64885509",
+        "name": "Seidnitz",
+        "place": "suburb",
+        "wikidata": "Q2266615",
+        "wikipedia": "de:Seidnitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.803068,
+          51.0275953
+        ]
+      },
+      "id": "node/64885509"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/64886718",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Prohlis",
+        "place": "suburb",
+        "wikidata": "Q2112285",
+        "wikipedia": "de:Prohlis"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7930626,
+          51.0066538
+        ]
+      },
+      "id": "node/64886718"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/64887945",
+        "is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Niedersedlitz",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8214684,
+          50.9975268
+        ]
+      },
+      "id": "node/64887945"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/64890139",
+        "is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Zschieren",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8750001,
+          50.9918571
+        ]
+      },
+      "id": "node/64890139"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/69537036",
+        "is_in": "Radebeul",
+        "name": "Zitzschewig",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.603764,
+          51.1184894
+        ]
+      },
+      "id": "node/69537036"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/69538251",
+        "is_in": "Radebeul",
+        "name": "Naundorf",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6064198,
+          51.1114741
+        ]
+      },
+      "id": "node/69538251"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/69539718",
+        "name": "Kötzschenbroda",
+        "name:hsb": "Kočebrody",
+        "place": "suburb",
+        "wikidata": "Q1167976",
+        "wikipedia": "de:Kötzschenbroda"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6309107,
+          51.1052596
+        ]
+      },
+      "id": "node/69539718"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/69541300",
+        "name": "Niederlößnitz",
+        "place": "suburb",
+        "wikidata": "Q1988244",
+        "wikipedia": "de:Niederlößnitz (Radebeul)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6445049,
+          51.1099168
+        ]
+      },
+      "id": "node/69541300"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/69543367",
+        "name": "Serkowitz",
+        "place": "suburb",
+        "wikidata": "Q1404895",
+        "wikipedia": "de:Serkowitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6587433,
+          51.0952921
+        ]
+      },
+      "id": "node/69543367"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/69546313",
+        "name": "Oberlößnitz",
+        "place": "suburb",
+        "wikidata": "Q2010329",
+        "wikipedia": "de:Oberlößnitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6799641,
+          51.1066072
+        ]
+      },
+      "id": "node/69546313"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/69547540",
+        "is_in": "Radebeul",
+        "name": "Lindenau",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6316793,
+          51.1231805
+        ]
+      },
+      "id": "node/69547540"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/84710033",
+        "ele": "117",
+        "name": "Radebeul",
+        "name:ba": "Радебойль",
+        "name:fa": "رادبویل",
+        "name:hsb": "Radobyle",
+        "name:kk": "Радебойль",
+        "name:lv": "Rādebeile",
+        "name:mk": "Радебојл",
+        "name:prefix": "Große Kreisstadt",
+        "name:ru": "Радебойль",
+        "name:sr": "Радебојл",
+        "name:uk": "Радебойль",
+        "name:zh": "拉德博伊尔",
+        "openGeoDB:loc_id": "22740",
+        "place": "town",
+        "population": "34008",
+        "postal_code": "01445",
+        "wikidata": "Q8762",
+        "wikipedia": "de:Radebeul"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6767995,
+          51.0999765
+        ]
+      },
+      "id": "node/84710033"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/86635357",
+        "name": "Lockwitz",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8062434,
+          50.9872806
+        ]
+      },
+      "id": "node/86635357"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/86795991",
+        "name": "Nickern",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7874795,
+          50.9942356
+        ]
+      },
+      "id": "node/86795991"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/88103045",
+        "name": "Königsbrück",
+        "name:hsb": "Kinspork",
+        "name:ru": "Кёнигсбрюк",
+        "openGeoDB:auto_update": "population,is_in",
+        "openGeoDB:combination_of_public_administration": "Verwaltungsgemeinschaft Königsbrück",
+        "openGeoDB:community_identification_number": "14292260",
+        "openGeoDB:is_in": "Kamenz,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "263",
+        "openGeoDB:layer": "6",
+        "openGeoDB:license_plate_code": "KM",
+        "openGeoDB:loc_id": "19524",
+        "openGeoDB:name": "Königsbrück",
+        "openGeoDB:population": "4876",
+        "openGeoDB:postal_codes": "01936",
+        "openGeoDB:sort_name": "KOENIGSBRUECK",
+        "openGeoDB:telephone_area_code": "035795",
+        "openGeoDB:type": "Stadt",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "opengeodb:lat": "51.2637467",
+        "opengeodb:lon": "13.9028338",
+        "place": "town",
+        "population": "4362",
+        "wikidata": "Q81739",
+        "wikipedia": "de:Königsbrück"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9028337,
+          51.2637467
+        ]
+      },
+      "id": "node/88103045"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/97723481",
+        "is_in": "Haselbachtal",
+        "name": "Reichenbach",
+        "name:hsb": "Rychbach",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9800426,
+          51.244034
+        ]
+      },
+      "id": "node/97723481"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/97747449",
+        "is_in": "Großnaundorf",
+        "name": "Mittelbach",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9691073,
+          51.1944115
+        ]
+      },
+      "id": "node/97747449"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/97950614",
+        "is_in": "Hohnstein",
+        "name": "Cunnersdorf",
+        "place": "suburb",
+        "postal_code": "01848"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1395533,
+          51.0083073
+        ]
+      },
+      "id": "node/97950614"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/119873937",
+        "name": "Radeburg",
+        "openGeoDB:auto_update": "population,is_in",
+        "openGeoDB:community_identification_number": "14280320",
+        "openGeoDB:is_in": "Meißen,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "279",
+        "openGeoDB:layer": "6",
+        "openGeoDB:license_plate_code": "MEI",
+        "openGeoDB:loc_id": "22741",
+        "openGeoDB:name": "Radeburg",
+        "openGeoDB:population": "7874",
+        "openGeoDB:postal_codes": "01471",
+        "openGeoDB:sort_name": "RADEBURG",
+        "openGeoDB:telephone_area_code": "035208",
+        "openGeoDB:type": "Stadt",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "opengeodb:lat": "51.2139822",
+        "opengeodb:lon": "13.7265005",
+        "place": "town",
+        "population": "7874"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7241174,
+          51.2149248
+        ]
+      },
+      "id": "node/119873937"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/121851533",
+        "is_in": "Coswig",
+        "name": "Neusörnewitz",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5491221,
+          51.1454235
+        ]
+      },
+      "id": "node/121851533"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/140417933",
+        "is_in": "Großenhain",
+        "name": "Weßnitz",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.55947,
+          51.277361
+        ]
+      },
+      "id": "node/140417933"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/195495280",
+        "name": "Weixdorf",
+        "place": "suburb",
+        "population": "6057",
+        "postal_code": "01108",
+        "website": "https://weixdorf.de/",
+        "wikidata": "Q2556716",
+        "wikipedia": "de:Weixdorf (Ortschaft)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8006456,
+          51.1447649
+        ]
+      },
+      "id": "node/195495280"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/197743215",
+        "name": "Trachau",
+        "place": "suburb",
+        "wikidata": "Q1805303",
+        "wikipedia": "de:Trachau"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7078055,
+          51.0879449
+        ]
+      },
+      "id": "node/197743215"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206143796",
+        "name": "Hohnstein",
+        "openGeoDB:auto_update": "population,is_in",
+        "openGeoDB:community_identification_number": "14287160",
+        "openGeoDB:is_in": "Sächsische Schweiz,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "487",
+        "openGeoDB:layer": "6",
+        "openGeoDB:license_plate_code": "PIR",
+        "openGeoDB:loc_id": "18570",
+        "openGeoDB:name": "Hohnstein",
+        "openGeoDB:population": "3839",
+        "openGeoDB:postal_codes": "01848",
+        "openGeoDB:sort_name": "HOHNSTEIN",
+        "openGeoDB:telephone_area_code": "035975",
+        "openGeoDB:type": "Stadt",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "opengeodb:lat": "50.9783764",
+        "opengeodb:lon": "14.1134247",
+        "place": "town",
+        "population": "3183",
+        "population:date": "2023-12-31",
+        "source:population": "wikipedia",
+        "wikidata": "Q6780",
+        "wikipedia": "de:Hohnstein (Sächsische Schweiz)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1111221,
+          50.9797836
+        ]
+      },
+      "id": "node/206143796"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/212774050",
+        "is_in": "Sächsische Schweiz-Osterzgebirge,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Liebstadt",
+        "openGeoDB:auto_update": "population,is_in",
+        "openGeoDB:combination_of_public_administration": "Verwaltungsgemeinschaft Bad Gottleuba-Berggießhübel",
+        "openGeoDB:community_identification_number": "14287230",
+        "openGeoDB:is_in": "Sächsische Schweiz,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "487",
+        "openGeoDB:layer": "6",
+        "openGeoDB:license_plate_code": "PIR",
+        "openGeoDB:loc_id": "20218",
+        "openGeoDB:name": "Liebstadt",
+        "openGeoDB:population": "1444",
+        "openGeoDB:postal_codes": "01825",
+        "openGeoDB:sort_name": "LIEBSTADT",
+        "openGeoDB:telephone_area_code": "035025",
+        "openGeoDB:type": "Stadt",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "opengeodb:lat": "50.8628993",
+        "opengeodb:lon": "13.8568098",
+        "place": "town",
+        "population": "555",
+        "population:date": "2011-05-09",
+        "source:population": "atlas.zensus2011.de",
+        "wikidata": "Q8199",
+        "wikipedia": "de:Liebstadt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8570413,
+          50.8634629
+        ]
+      },
+      "id": "node/212774050"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/219262836",
+        "ele": "297",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Schönfeld",
+        "place": "suburb",
+        "postal_code": "01328",
+        "wikidata": "Q1287867",
+        "wikipedia": "de:Schönfeld (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8948846,
+          51.0337041
+        ]
+      },
+      "id": "node/219262836"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240023441",
+        "is_in": "Sächsische Schweiz-Osterzgebirge,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Bad Gottleuba-Berggießhübel",
+        "name:fa": "باد گوتلوبا-برگیس‌هوبل",
+        "name:ru": "Бад-Готлойба-Берггисхюбель",
+        "name:sr": "Бад Готлојба-Бергисхибел",
+        "openGeoDB:auto_update": "population,place,name,is_in",
+        "openGeoDB:combination_of_public_administration": "Verwaltungsgemeinschaft Bad Gottleuba-Berggießhübel",
+        "openGeoDB:community_identification_number": "14287015",
+        "openGeoDB:is_in": "Sächsische Schweiz,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "487",
+        "openGeoDB:layer": "6",
+        "openGeoDB:license_plate_code": "PIR",
+        "openGeoDB:loc_id": "13918",
+        "openGeoDB:location": "political_structure",
+        "openGeoDB:name": "Bad Gottleuba-Berggießhübel",
+        "openGeoDB:population": "6277",
+        "openGeoDB:postal_codes": "01816",
+        "openGeoDB:sort_name": "BAD GOTTLEUBA",
+        "openGeoDB:telephone_area_code": "035023",
+        "openGeoDB:type": "Stadt",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "place": "town",
+        "population": "6277",
+        "wikidata": "Q6307",
+        "wikipedia": "de:Bad Gottleuba-Berggießhübel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9480444,
+          50.8584186
+        ]
+      },
+      "id": "node/240023441"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240024401",
+        "ele": "171",
+        "name": "Freital",
+        "name:ar": "فرايتال",
+        "name:bg": "Фрайтал",
+        "name:de": "Freital",
+        "name:fa": "فرایتال",
+        "name:hsb": "Freital",
+        "name:mk": "Фрајтал",
+        "name:ru": "Фрайталь",
+        "name:sr": "Фрајтал",
+        "name:zh": "弗赖塔尔",
+        "openGeoDB:community_identification_number": "14290130",
+        "openGeoDB:is_in_loc_id": "491",
+        "openGeoDB:layer": "6",
+        "openGeoDB:license_plate_code": "DW",
+        "openGeoDB:loc_id": "16656",
+        "openGeoDB:telephone_area_code": "0351",
+        "place": "town",
+        "population": "39276",
+        "postal_code": "01705",
+        "wikidata": "Q5870",
+        "wikipedia": "de:Freital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6530329,
+          51.016265
+        ]
+      },
+      "id": "node/240024401"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240030513",
+        "is_in": "Dresden,Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Johannstadt",
+        "openGeoDB:auto_update": "population,place,name,is_in",
+        "openGeoDB:community_identification_number": "14262000",
+        "openGeoDB:is_in": "Dresden,Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "15827",
+        "openGeoDB:layer": "8",
+        "openGeoDB:license_plate_code": "DD",
+        "openGeoDB:loc_id": "27376",
+        "openGeoDB:location": "postal_code_area",
+        "openGeoDB:name": "Johannstadt",
+        "openGeoDB:postal_codes": "01067,01069,01097,01099,01109,01127,01129,01139,01157,01159,01169,01187,01189,01217,01219,01237,01239,01257,01259,01277,01279,01307,01309,01324,01326,01108,01156,01328,01462,01465,01478",
+        "openGeoDB:sort_name": "JOHANNSTADT",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "place": "suburb",
+        "wikidata": "Q1699003",
+        "wikipedia": "de:Johannstadt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7673583,
+          51.0507409
+        ]
+      },
+      "id": "node/240030513"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240034315",
+        "is_in": "Bautzen,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "loc_name": "Schummlau",
+        "name": "Elstra",
+        "name:hsb": "Halštrow",
+        "openGeoDB:auto_update": "population",
+        "openGeoDB:community_identification_number": "14292120",
+        "openGeoDB:is_in": "Kamenz,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "263",
+        "openGeoDB:layer": "6",
+        "openGeoDB:license_plate_code": "KM",
+        "openGeoDB:loc_id": "16159",
+        "openGeoDB:location": "political_structure",
+        "openGeoDB:name": "Elstra",
+        "openGeoDB:population": "3191",
+        "openGeoDB:postal_codes": "01920",
+        "openGeoDB:sort_name": "ELSTRA",
+        "openGeoDB:telephone_area_code": "035793",
+        "openGeoDB:type": "Stadt",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "place": "town",
+        "population": "3191",
+        "wikidata": "Q81735",
+        "wikipedia": "de:Elstra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1350305,
+          51.220516
+        ]
+      },
+      "id": "node/240034315"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240035898",
+        "alt_name": "Gage",
+        "name": "Großröhrsdorf",
+        "name:de": "Großröhrsdorf",
+        "name:hsb": "Wulke Rědorjecy",
+        "openGeoDB:auto_update": "population,place,name,is_in",
+        "openGeoDB:combination_of_public_administration": "Verwaltungsgemeinschaft Großröhrsdorf",
+        "openGeoDB:community_identification_number": "14292180",
+        "openGeoDB:is_in": "Kamenz,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "263",
+        "openGeoDB:layer": "6",
+        "openGeoDB:license_plate_code": "KM",
+        "openGeoDB:loc_id": "17561",
+        "openGeoDB:location": "political_structure",
+        "openGeoDB:name": "Großröhrsdorf, Oberlausitz",
+        "openGeoDB:population": "7491",
+        "openGeoDB:postal_codes": "01900",
+        "openGeoDB:sort_name": "GROSSROEHRSDORF",
+        "openGeoDB:telephone_area_code": "035952",
+        "openGeoDB:type": "Stadt",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "place": "town",
+        "population": "7491",
+        "wikidata": "Q81736",
+        "wikipedia": "de:Großröhrsdorf"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0199103,
+          51.1456848
+        ]
+      },
+      "id": "node/240035898"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240045631",
+        "alt_name": "Stadt Meißen",
+        "description:de": "Große Kreisstadt im Landkreis Meißen",
+        "ele": "106",
+        "name": "Meißen",
+        "name:ar": "مايسن",
+        "name:az-Arab": "مایسن",
+        "name:azb": "مایسن",
+        "name:cs": "Míšeň",
+        "name:de": "Meißen",
+        "name:el": "Μάισσεν",
+        "name:en": "Meissen",
+        "name:es": "Misnia",
+        "name:fa": "مایسن",
+        "name:fr": "Meissen",
+        "name:he": "מייסן",
+        "name:hsb": "Mišno",
+        "name:ja": "マイセン",
+        "name:kk-Arab": "مەيسەن",
+        "name:ko": "마이센",
+        "name:lt": "Meisenas",
+        "name:lv": "Meisene",
+        "name:pl": "Miśnia",
+        "name:pnb": "مائیسن",
+        "name:prefix": "Stadt",
+        "name:ru": "Майсен",
+        "name:th": "ไมเซิน",
+        "name:ur": "مایسن",
+        "name:zh": "迈森",
+        "official_name": "Meißen",
+        "official_name:de": "Stadt Meißen",
+        "official_name:es": "Ciudad de Misnia",
+        "official_name:fr": "Ville de Meissen",
+        "old_name:fr": "Misnie",
+        "openGeoDB:loc_id": "20792",
+        "place": "town",
+        "population": "29051",
+        "population:date": "2023-12-31",
+        "postal_code": "01662",
+        "source:population": "wikipedia",
+        "website": "https://www.stadt-meissen.de/index.html",
+        "wikidata": "Q8738",
+        "wikipedia": "de:Meißen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4704939,
+          51.1630871
+        ]
+      },
+      "id": "node/240045631"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240045955",
+        "is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Innere Altstadt",
+        "openGeoDB:auto_update": "population,place,name,is_in",
+        "openGeoDB:community_identification_number": "14262000",
+        "openGeoDB:is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "13348",
+        "openGeoDB:layer": "9",
+        "openGeoDB:license_plate_code": "DD",
+        "openGeoDB:loc_id": "27374",
+        "openGeoDB:location": "district",
+        "openGeoDB:name": "Innere Altstadt",
+        "openGeoDB:postal_codes": "01067,01069",
+        "openGeoDB:sort_name": "INNERE ALTSTADT",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "place": "suburb",
+        "wikidata": "Q8922",
+        "wikipedia": "de:Innere Altstadt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7372977,
+          51.0517447
+        ]
+      },
+      "id": "node/240045955"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240052023",
+        "ele": "120",
+        "is_in": "Sächsische Schweiz-Osterzgebirge,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Stadt Wehlen",
+        "name:hsb": "Wjelin",
+        "openGeoDB:auto_update": "population,place,name,is_in",
+        "openGeoDB:combination_of_public_administration": "Verwaltungsgemeinschaft Lohmen",
+        "openGeoDB:community_identification_number": "14628370",
+        "openGeoDB:is_in": "Sächsische Schweiz,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "487",
+        "openGeoDB:layer": "6",
+        "openGeoDB:license_plate_code": "PIR",
+        "openGeoDB:loc_id": "24450",
+        "openGeoDB:location": "political_structure",
+        "openGeoDB:name": "Wehlen",
+        "openGeoDB:population": "1724",
+        "openGeoDB:postal_codes": "01829",
+        "openGeoDB:sort_name": "WEHLEN",
+        "openGeoDB:telephone_area_code": "035024",
+        "openGeoDB:type": "Stadt",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "place": "town",
+        "population": "1724",
+        "wikidata": "Q8240",
+        "wikipedia": "de:Stadt Wehlen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0307534,
+          50.957091
+        ]
+      },
+      "id": "node/240052023"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240057083",
+        "is_in": "Striesen,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Zöllmen",
+        "openGeoDB:auto_update": "population,place,name,is_in",
+        "openGeoDB:community_identification_number": "14262000",
+        "openGeoDB:is_in": "Striesen,Dresden,Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "27378",
+        "openGeoDB:layer": "9",
+        "openGeoDB:license_plate_code": "DD",
+        "openGeoDB:loc_id": "27372",
+        "openGeoDB:location": "district",
+        "openGeoDB:name": "Zöllmen",
+        "openGeoDB:postal_codes": "01156,01462",
+        "openGeoDB:sort_name": "ZOELLMEN",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "place": "suburb",
+        "wikidata": "Q247778",
+        "wikipedia": "de:Zöllmen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6109099,
+          51.0430199
+        ]
+      },
+      "id": "node/240057083"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240061759",
+        "ele": "212",
+        "is_in": "Sächsische Schweiz-Osterzgebirge,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Königstein",
+        "name:hsb": "Kralowc",
+        "official_name": "Königstein/Sächs. Schw.",
+        "openGeoDB:auto_update": "population",
+        "openGeoDB:combination_of_public_administration": "Verwaltungsgemeinschaft Stadt Königstein/Kurort Rathen",
+        "openGeoDB:community_identification_number": "14287190",
+        "openGeoDB:is_in": "Sächsische Schweiz,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "487",
+        "openGeoDB:layer": "6",
+        "openGeoDB:license_plate_code": "PIR",
+        "openGeoDB:loc_id": "19545",
+        "openGeoDB:location": "political_structure",
+        "openGeoDB:name": "Königstein / Sächsische Schweiz",
+        "openGeoDB:population": "2994",
+        "openGeoDB:postal_codes": "01824",
+        "openGeoDB:sort_name": "KOENIGSTEIN",
+        "openGeoDB:telephone_area_code": "035021",
+        "openGeoDB:type": "Stadt",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "place": "town",
+        "population": "2700",
+        "wikidata": "Q6783",
+        "wikipedia": "de:Königstein (Sächsische Schweiz)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0732271,
+          50.9185261
+        ]
+      },
+      "id": "node/240061759"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240064143",
+        "is_in": "Sächsische Schweiz-Osterzgebirge,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Dohna",
+        "name:ar": "دونا",
+        "name:fa": "دونا",
+        "name:hsb": "Donin",
+        "openGeoDB:auto_update": "population,place,name,is_in",
+        "openGeoDB:combination_of_public_administration": "Verwaltungsgemeinschaft Dohna",
+        "openGeoDB:community_identification_number": "14287100",
+        "openGeoDB:is_in": "Sächsische Schweiz,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "487",
+        "openGeoDB:layer": "6",
+        "openGeoDB:license_plate_code": "PIR",
+        "openGeoDB:loc_id": "15720",
+        "openGeoDB:location": "political_structure",
+        "openGeoDB:name": "Dohna, Sachsen",
+        "openGeoDB:population": "6053",
+        "openGeoDB:postal_codes": "01809",
+        "openGeoDB:sort_name": "DOHNA",
+        "openGeoDB:telephone_area_code": "035027",
+        "openGeoDB:type": "Stadt",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "place": "town",
+        "population": "6053",
+        "wikidata": "Q6474",
+        "wikipedia": "de:Dohna"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8587012,
+          50.955232
+        ]
+      },
+      "id": "node/240064143"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240067767",
+        "is_in": "Dresden,Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Naußlitz",
+        "openGeoDB:auto_update": "population,place,name,is_in",
+        "openGeoDB:community_identification_number": "14262000",
+        "openGeoDB:is_in": "Dresden,Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "15827",
+        "openGeoDB:layer": "9",
+        "openGeoDB:license_plate_code": "DD",
+        "openGeoDB:loc_id": "27385",
+        "openGeoDB:location": "district",
+        "openGeoDB:name": "Naußlitz",
+        "openGeoDB:postal_codes": "01159,01169,01187,01189",
+        "openGeoDB:sort_name": "NAUSSLITZ",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "place": "suburb",
+        "wikidata": "Q1972162",
+        "wikipedia": "de:Naußlitz (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6860039,
+          51.0338644
+        ]
+      },
+      "id": "node/240067767"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240075183",
+        "is_in": "Gorbitz,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Roitzsch",
+        "openGeoDB:auto_update": "population,place,name,is_in",
+        "openGeoDB:community_identification_number": "14262000",
+        "openGeoDB:is_in": "Gorbitz,Dresden,Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "27384",
+        "openGeoDB:layer": "9",
+        "openGeoDB:license_plate_code": "DD",
+        "openGeoDB:loc_id": "27370",
+        "openGeoDB:location": "district",
+        "openGeoDB:name": "Roitzsch bei Dresden",
+        "openGeoDB:postal_codes": "01156,01462",
+        "openGeoDB:sort_name": "ROITZSCH",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "place": "suburb",
+        "wikidata": "Q2162510",
+        "wikipedia": "de:Roitzsch (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6092978,
+          51.0539154
+        ]
+      },
+      "id": "node/240075183"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240080951",
+        "name": "Stetzsch",
+        "openGeoDB:auto_update": "population,place,name,is_in",
+        "openGeoDB:community_identification_number": "14262000",
+        "openGeoDB:is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "27378",
+        "openGeoDB:layer": "9",
+        "openGeoDB:license_plate_code": "DD",
+        "openGeoDB:loc_id": "27382",
+        "openGeoDB:location": "district",
+        "openGeoDB:name": "Stetzsch",
+        "openGeoDB:postal_codes": "01067,01069,01097,01099,01109,01127,01129,01139,01157,01159,01169,01187,01189,01217,01219,01237,01239,01257,01259,01277,01279,01307,01309,01324,01326,01108,01156,01328,01462,01465,01478",
+        "openGeoDB:sort_name": "STETZSCH",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "place": "suburb",
+        "wikidata": "Q2346357",
+        "wikipedia": "de:Stetzsch"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6578325,
+          51.0814688
+        ]
+      },
+      "id": "node/240080951"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240088093",
+        "is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Ockerwitz",
+        "openGeoDB:auto_update": "population,place,name,is_in",
+        "openGeoDB:community_identification_number": "14262000",
+        "openGeoDB:is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "15827",
+        "openGeoDB:layer": "9",
+        "openGeoDB:license_plate_code": "DD",
+        "openGeoDB:loc_id": "27368",
+        "openGeoDB:location": "district",
+        "openGeoDB:name": "Ockerwitz",
+        "openGeoDB:postal_codes": "01156,01462",
+        "openGeoDB:sort_name": "OCKERWITZ",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "place": "suburb",
+        "wikidata": "Q2013740",
+        "wikipedia": "de:Ockerwitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6439177,
+          51.0559822
+        ]
+      },
+      "id": "node/240088093"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240092500",
+        "name": "Glashütte",
+        "openGeoDB:auto_update": "population,place,is_in",
+        "openGeoDB:community_identification_number": "14290150",
+        "openGeoDB:is_in": "Weißeritzkreis,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "491",
+        "openGeoDB:layer": "6",
+        "openGeoDB:license_plate_code": "DW",
+        "openGeoDB:loc_id": "17068",
+        "openGeoDB:location": "political_structure",
+        "openGeoDB:name": "Glashütte, Sachsen",
+        "openGeoDB:population": "4761",
+        "openGeoDB:postal_codes": "01768",
+        "openGeoDB:sort_name": "GLASHUETTE",
+        "openGeoDB:telephone_area_code": "035053",
+        "openGeoDB:type": "Stadt",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "place": "town",
+        "population": "4761",
+        "wikidata": "Q6696",
+        "wikipedia": "de:Glashütte (Sachsen)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7766767,
+          50.8502095
+        ]
+      },
+      "id": "node/240092500"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240097094",
+        "is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Briesnitz",
+        "name:hsb": "Brěznica",
+        "openGeoDB:auto_update": "population,place,name,is_in",
+        "openGeoDB:community_identification_number": "14262000",
+        "openGeoDB:is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "15827",
+        "openGeoDB:layer": "9",
+        "openGeoDB:license_plate_code": "DD",
+        "openGeoDB:loc_id": "27381",
+        "openGeoDB:location": "district",
+        "openGeoDB:name": "Briesnitz",
+        "openGeoDB:postal_codes": "01157,01169",
+        "openGeoDB:sort_name": "BRIESNITZ",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "place": "suburb",
+        "wikidata": "Q915219",
+        "wikipedia": "de:Briesnitz (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6679675,
+          51.0639097
+        ]
+      },
+      "id": "node/240097094"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240109759",
+        "is_in": "Dresden,Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Blasewitz",
+        "openGeoDB:community_identification_number": "14262000",
+        "openGeoDB:is_in_loc_id": "15827",
+        "openGeoDB:layer": "9",
+        "openGeoDB:license_plate_code": "DD",
+        "openGeoDB:loc_id": "27377",
+        "openGeoDB:location": "district",
+        "openGeoDB:postal_codes": "01277,01279,01307,01309",
+        "place": "suburb",
+        "wikidata": "Q8897",
+        "wikipedia": "de:Blasewitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7990205,
+          51.0521778
+        ]
+      },
+      "id": "node/240109759"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240112849",
+        "is_in": "Sächsische Schweiz-Osterzgebirge,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Rabenau",
+        "openGeoDB:auto_update": "population,place,is_in",
+        "openGeoDB:community_identification_number": "14290360",
+        "openGeoDB:is_in": "Sächsische Schweiz-Osterzgebirge,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "openGeoDB:is_in_loc_id": "491",
+        "openGeoDB:layer": "6",
+        "openGeoDB:license_plate_code": "PIR",
+        "openGeoDB:loc_id": "22724",
+        "openGeoDB:location": "political_structure",
+        "openGeoDB:name": "Rabenau, Sachsen",
+        "openGeoDB:population": "4743",
+        "openGeoDB:postal_codes": "01734",
+        "openGeoDB:sort_name": "RABENAU",
+        "openGeoDB:telephone_area_code": "0351",
+        "openGeoDB:type": "Stadt",
+        "openGeoDB:version": "0.2.6.11 / 2007-12-04 / http://fa-technik.adfc.de/code/opengeodb/dump/",
+        "place": "town",
+        "population": "4743",
+        "website": "https://www.rabenau.net/",
+        "wikidata": "Q8218",
+        "wikipedia": "de:Rabenau (Sachsen)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6418236,
+          50.9631279
+        ]
+      },
+      "id": "node/240112849"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240123051",
+        "ele": "121",
+        "is_in": "Sächsische Schweiz-Osterzgebirge,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Heidenau",
+        "name:ar": "هايدنو",
+        "name:fa": "هایدنو",
+        "openGeoDB:community_identification_number": "14287140",
+        "openGeoDB:is_in_loc_id": "487",
+        "openGeoDB:layer": "6",
+        "openGeoDB:license_plate_code": "PIR",
+        "openGeoDB:loc_id": "18056",
+        "openGeoDB:telephone_area_code": "03529",
+        "place": "town",
+        "population": "16151",
+        "postal_code": "01809",
+        "wikidata": "Q6715",
+        "wikipedia": "de:Heidenau (Sachsen)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8753917,
+          50.9735851
+        ]
+      },
+      "id": "node/240123051"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240124727",
+        "ele": "118",
+        "name": "Coswig",
+        "name:hsb": "Kosowiki",
+        "openGeoDB:loc_id": "15330",
+        "place": "town",
+        "population": "20561",
+        "population:date": "2023-12-31",
+        "postal_code": "01640",
+        "ref:LOCODE": "DECWG",
+        "source:population": "wikipedia",
+        "wikidata": "Q8693",
+        "wikipedia": "de:Coswig (Sachsen)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5783983,
+          51.1267305
+        ]
+      },
+      "id": "node/240124727"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240125123",
+        "name": "Kamenz - Kamjenc",
+        "name:ar": "كامنتس",
+        "name:ba": "Каменц",
+        "name:bg": "Каменц",
+        "name:cs": "Kamenec",
+        "name:de": "Kamenz",
+        "name:dsb": "Kamjeńc",
+        "name:fa": "کامنتس",
+        "name:hsb": "Kamjenc",
+        "name:la": "Camentia",
+        "name:lv": "Kāmenca",
+        "name:mk": "Каменц",
+        "name:ru": "Каменц",
+        "name:sr": "Каменц",
+        "name:uk": "Каменц",
+        "name:zh": "卡门茨",
+        "openGeoDB:combination_of_public_administration": "Verwaltungsgemeinschaft Kamenz-Schönteichen",
+        "openGeoDB:community_identification_number": "14292210",
+        "openGeoDB:loc_id": "19057",
+        "openGeoDB:telephone_area_code": "03578",
+        "place": "town",
+        "population": "16861",
+        "population:date": "2023-12-31",
+        "postal_code": "01917",
+        "source:population": "wikipedia",
+        "wikidata": "Q81722",
+        "wikipedia": "de:Kamenz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0948628,
+          51.270139
+        ]
+      },
+      "id": "node/240125123"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240174993",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Sporbitz",
+        "place": "suburb",
+        "wikidata": "Q2312167",
+        "wikipedia": "de:Sporbitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8502349,
+          50.9937401
+        ]
+      },
+      "id": "node/240174993"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/241780987",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Meußlitz",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8551618,
+          50.9973863
+        ]
+      },
+      "id": "node/241780987"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/247163354",
+        "is_in": "Haselbachtal",
+        "name": "Häslich",
+        "name:hsb": "Haslowy",
+        "place": "suburb",
+        "wikidata": "Q110234729"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0148977,
+          51.2450926
+        ]
+      },
+      "id": "node/247163354"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/250926491",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Rochwitz",
+        "place": "suburb",
+        "wikidata": "Q2160346",
+        "wikipedia": "de:Rochwitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.844271,
+          51.0494617
+        ]
+      },
+      "id": "node/250926491"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/250926539",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Eichbusch",
+        "place": "suburb",
+        "wikidata": "Q1301291",
+        "wikipedia": "de:Eichbusch (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8774409,
+          51.0322753
+        ]
+      },
+      "id": "node/250926539"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/250926767",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Reitzendorf",
+        "place": "suburb",
+        "wikidata": "Q2142233",
+        "wikipedia": "de:Reitzendorf (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9039904,
+          51.0253099
+        ]
+      },
+      "id": "node/250926767"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/251537884",
+        "name": "Großdrebnitz",
+        "name:hsb": "Drjewnica",
+        "place": "suburb",
+        "wikidata": "Q159828",
+        "wikipedia": "de:Großdrebnitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1579683,
+          51.0886388
+        ]
+      },
+      "id": "node/251537884"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/251756203",
+        "name": "Schmiedefeld",
+        "place": "suburb",
+        "wikidata": "Q25873524",
+        "wikipedia": "de:Schmiedefeld (Großharthau)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0729882,
+          51.0857904
+        ]
+      },
+      "id": "node/251756203"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/251756237",
+        "is_in": "Großharthau",
+        "name": "Seeligstadt",
+        "place": "suburb",
+        "wikidata": "Q2265279",
+        "wikipedia": "de:Seeligstadt (Großharthau)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0439878,
+          51.0984635
+        ]
+      },
+      "id": "node/251756237"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/252928409",
+        "is_in": "Bretnig-Hauswalde",
+        "name": "Bretnig",
+        "name:hsb": "Brětnik",
+        "place": "suburb",
+        "wikidata": "Q116209729"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.060793,
+          51.1473926
+        ]
+      },
+      "id": "node/252928409"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/252928503",
+        "is_in": "Bretnig-Hauswalde",
+        "name": "Hauswalde",
+        "place": "suburb",
+        "wikidata": "Q32054390"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0910055,
+          51.1525612
+        ]
+      },
+      "id": "node/252928503"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/252956093",
+        "name": "Pillnitz",
+        "name:hsb": "Bělnicy",
+        "place": "suburb",
+        "wikidata": "Q8946",
+        "wikipedia": "de:Pillnitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8713801,
+          51.0126628
+        ]
+      },
+      "id": "node/252956093"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/256478495",
+        "is_in": "Ohorn",
+        "name": "Gickelsberg",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.054906,
+          51.1888145
+        ]
+      },
+      "id": "node/256478495"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/256485308",
+        "created_by": "Potlatch 0.9b",
+        "is_in": "Haselbachtal",
+        "name": "Möhrsdorf",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0752371,
+          51.2122853
+        ]
+      },
+      "id": "node/256485308"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/256489287",
+        "is_in": "Elstra",
+        "name": "Talpenberg",
+        "name:hsb": "Talpin",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1171934,
+          51.2172314
+        ]
+      },
+      "id": "node/256489287"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/256489878",
+        "is_in": "Elstra,Bautzen,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Rehnsdorf",
+        "name:hsb": "Hrańčik",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1051848,
+          51.2100062
+        ]
+      },
+      "id": "node/256489878"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/256500245",
+        "is_in": "Haselbachtal",
+        "name": "Bischheim",
+        "name:hsb": "Biskopicy",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0391546,
+          51.2389546
+        ]
+      },
+      "id": "node/256500245"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/257800517",
+        "is_in": "Steina",
+        "name": "Weißbach",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0322523,
+          51.2191032
+        ]
+      },
+      "id": "node/257800517"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/257968116",
+        "is_in": "Stolpen",
+        "name": "Rennersdorf-Neudörfel",
+        "place": "suburb",
+        "wikidata": "Q1322311",
+        "wikipedia": "de:Rennersdorf-Neudörfel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0670938,
+          51.0607245
+        ]
+      },
+      "id": "node/257968116"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/258409516",
+        "name": "Birkwitz",
+        "place": "suburb",
+        "wikidata": "Q865695",
+        "wikipedia": "de:Birkwitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8888737,
+          50.9798791
+        ]
+      },
+      "id": "node/258409516"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/260457396",
+        "is_in": "Pirna",
+        "name": "Hinterjessen",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9382506,
+          50.9884421
+        ]
+      },
+      "id": "node/260457396"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/260796160",
+        "is_in": "Elstra,Bautzen,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Wohla",
+        "name:hsb": "Walow",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1162887,
+          51.2326913
+        ]
+      },
+      "id": "node/260796160"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/261639399",
+        "is_in": "Lohmen",
+        "name": "Doberzeit",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9695887,
+          50.9841188
+        ]
+      },
+      "id": "node/261639399"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/264392182",
+        "is_in": "Dürrröhrsdorf-Dittersbach",
+        "name": "Wilschdorf",
+        "place": "suburb",
+        "wikidata": "Q1725702",
+        "wikipedia": "de:Wilschdorf (Dürrröhrsdorf-Dittersbach)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.013725,
+          51.0623894
+        ]
+      },
+      "id": "node/264392182"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/264757177",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Söbrigen",
+        "place": "suburb",
+        "wikidata": "Q2379589",
+        "wikipedia": "de:Söbrigen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8828156,
+          50.9941457
+        ]
+      },
+      "id": "node/264757177"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/264758166",
+        "is_in": "Pirna",
+        "name": "Posta",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9539824,
+          50.9665189
+        ]
+      },
+      "id": "node/264758166"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/267010353",
+        "is_in": "Lohmen",
+        "name": "Mühlsdorf",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9872946,
+          50.9953966
+        ]
+      },
+      "id": "node/267010353"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/267177341",
+        "is_in": "Hohnstein",
+        "name": "Ehrenberg",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1518346,
+          50.9907458
+        ]
+      },
+      "id": "node/267177341"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/267375058",
+        "created_by": "Potlatch 0.9c",
+        "is_in": "Hohnstein",
+        "name": "Stürza",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0627253,
+          51.0116915
+        ]
+      },
+      "id": "node/267375058"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/270430725",
+        "name": "Kemnitz",
+        "place": "suburb",
+        "wikidata": "Q1738517",
+        "wikipedia": "de:Kemnitz (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6644011,
+          51.0708403
+        ]
+      },
+      "id": "node/270430725"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/271310045",
+        "is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Großluga",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8304426,
+          50.9867115
+        ]
+      },
+      "id": "node/271310045"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/277057794",
+        "is_in": "Meißen,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Winkwitz",
+        "place": "suburb",
+        "wikidata": "Q2584655",
+        "wikipedia": "de:Winkwitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4714649,
+          51.1817574
+        ]
+      },
+      "id": "node/277057794"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/278396390",
+        "name": "Wurgwitz",
+        "place": "suburb",
+        "population": "2600",
+        "postal_code": "01705",
+        "wikidata": "Q6392",
+        "wikipedia": "de:Wurgwitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6276404,
+          51.0255828
+        ]
+      },
+      "id": "node/278396390"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/279154716",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Kaitz",
+        "place": "suburb",
+        "wikidata": "Q1721801",
+        "wikipedia": "de:Kaitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7275321,
+          51.0139212
+        ]
+      },
+      "id": "node/279154716"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/279374090",
+        "is_in": "Radebeul,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Wahnsdorf",
+        "place": "suburb",
+        "wikidata": "Q1754470",
+        "wikipedia": "de:Wahnsdorf"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6716604,
+          51.1188501
+        ]
+      },
+      "id": "node/279374090"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/286560200",
+        "created_by": "Potlatch 0.10b",
+        "is_in": "Stolpen",
+        "name": "Helmsdorf",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0412767,
+          51.0371158
+        ]
+      },
+      "id": "node/286560200"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/290032318",
+        "name": "Dobritz",
+        "place": "suburb",
+        "wikidata": "Q1233449",
+        "wikipedia": "de:Dobritz (Meißen)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4423689,
+          51.1376519
+        ]
+      },
+      "id": "node/290032318"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/290032340",
+        "name": "Buschbad",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4596209,
+          51.1344205
+        ]
+      },
+      "id": "node/290032340"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/296555335",
+        "is_in": "Pirna",
+        "name": "Sonnenstein",
+        "name:ar": "زننشتاين",
+        "place": "suburb",
+        "wikidata": "Q1112797",
+        "wikipedia": "de:Sonnenstein (Pirna)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9513544,
+          50.95688
+        ]
+      },
+      "id": "node/296555335"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/306488229",
+        "is_in": "Stolpen",
+        "name": "Heeselicht",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0900772,
+          51.0078998
+        ]
+      },
+      "id": "node/306488229"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/310238011",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Löbtau",
+        "old_name": "Kuhlöbtau",
+        "place": "suburb",
+        "wikidata": "Q1879617",
+        "wikipedia": "de:Löbtau"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6984581,
+          51.0413452
+        ]
+      },
+      "id": "node/310238011"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/316822619",
+        "is_in": "Meißen,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Rottewitz",
+        "place": "suburb",
+        "wikidata": "Q2169055",
+        "wikipedia": "de:Rottewitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4632389,
+          51.182858
+        ]
+      },
+      "id": "node/316822619"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/324663622",
+        "is_in": "Pirna",
+        "name": "Cunnersdorf",
+        "name:ar": "كنرسدورف",
+        "place": "suburb",
+        "population": "130",
+        "postal_code": "01796",
+        "wikidata": "Q1144004",
+        "wikipedia": "de:Cunnersdorf (Pirna)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9620218,
+          50.9596832
+        ]
+      },
+      "id": "node/324663622"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/330855342",
+        "name": "Niederhermsdorf",
+        "place": "suburb",
+        "wikidata": "Q1987847",
+        "wikipedia": "de:Niederhermsdorf"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6157997,
+          51.0221846
+        ]
+      },
+      "id": "node/330855342"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/341229962",
+        "name": "Cossebaude",
+        "name:hsb": "Kosobudy",
+        "place": "suburb",
+        "wikidata": "Q1117549",
+        "wikipedia": "de:Cossebaude (Ortsteil)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6298379,
+          51.0876124
+        ]
+      },
+      "id": "node/341229962"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/343384903",
+        "is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Kleinluga",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8303387,
+          50.9827084
+        ]
+      },
+      "id": "node/343384903"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/343532660",
+        "name": "Hosterwitz",
+        "place": "suburb",
+        "wikidata": "Q1630590",
+        "wikipedia": "de:Hosterwitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8630803,
+          51.0145851
+        ]
+      },
+      "id": "node/343532660"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/344955964",
+        "name": "Hellerau",
+        "place": "suburb",
+        "wikidata": "Q8920",
+        "wikipedia": "en:Hellerau"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7595615,
+          51.1126515
+        ]
+      },
+      "id": "node/344955964"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/345561117",
+        "name": "Klotzsche",
+        "name:hsb": "Kłóčow",
+        "place": "suburb",
+        "wikidata": "Q8931",
+        "wikipedia": "de:Klotzsche"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7781539,
+          51.1186284
+        ]
+      },
+      "id": "node/345561117"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/347312896",
+        "is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Trachenberge",
+        "place": "suburb",
+        "wikidata": "Q2447490",
+        "wikipedia": "de:Trachenberge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7284263,
+          51.0959794
+        ]
+      },
+      "id": "node/347312896"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/348093634",
+        "name": "Mobschatz",
+        "place": "suburb",
+        "wikidata": "Q1941602",
+        "wikipedia": "de:Mobschatz (Ortsteil)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6437255,
+          51.0791557
+        ]
+      },
+      "id": "node/348093634"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/348093724",
+        "name": "Niederwartha",
+        "place": "suburb",
+        "wikidata": "Q8964",
+        "wikipedia": "de:Niederwartha"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6064712,
+          51.090646
+        ]
+      },
+      "id": "node/348093724"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/348094021",
+        "is_in": "Cossebaude,Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Oberwartha",
+        "place": "suburb",
+        "wikidata": "Q1674903",
+        "wikipedia": "de:Oberwartha"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6047327,
+          51.0816091
+        ]
+      },
+      "id": "node/348094021"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/349003720",
+        "is_in": "Bad Gottleuba-Berggießhübel,Sächsische Schweiz-Osterzgebirge,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Berggießhübel",
+        "name:prefix": "Kurort",
+        "place": "suburb",
+        "postal_code": "01816",
+        "wikidata": "Q15096887",
+        "wikimedia_commons": "Category:Berggießhübel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9480113,
+          50.8737844
+        ]
+      },
+      "id": "node/349003720"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/364701963",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Kaditz",
+        "place": "suburb",
+        "wikidata": "Q1720959",
+        "wikipedia": "de:Kaditz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6776905,
+          51.0843554
+        ]
+      },
+      "id": "node/364701963"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/364702242",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Übigau",
+        "place": "suburb",
+        "wikidata": "Q8955",
+        "wikipedia": "de:Übigau"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6931327,
+          51.0713098
+        ]
+      },
+      "id": "node/364702242"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/364702628",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Mickten",
+        "place": "suburb",
+        "wikidata": "Q8942",
+        "wikipedia": "de:Mickten"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7070254,
+          51.0781249
+        ]
+      },
+      "id": "node/364702628"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/428748489",
+        "is_in": "Ottendorf-Okrilla,Bautzen,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Cunnersdorf",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8081959,
+          51.1838298
+        ]
+      },
+      "id": "node/428748489"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/428748492",
+        "is_in": "Medingen,Ottendorf-Okrilla,Bautzen,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Hufen",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7909441,
+          51.170515
+        ]
+      },
+      "id": "node/428748492"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/450624393",
+        "name": "Obergohlis",
+        "place": "suburb",
+        "wikidata": "Q110289283"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6484784,
+          51.0874338
+        ]
+      },
+      "id": "node/450624393"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/471602402",
+        "is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Pieschen",
+        "place": "suburb",
+        "wikidata": "Q8945",
+        "wikipedia": "de:Pieschen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7225624,
+          51.0831018
+        ]
+      },
+      "id": "node/471602402"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/528083272",
+        "name": "Innere Neustadt",
+        "place": "suburb",
+        "wikidata": "Q8924",
+        "wikipedia": "de:Innere Neustadt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7446283,
+          51.0600782
+        ]
+      },
+      "id": "node/528083272"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/528083279",
+        "alt_name": "Antonstadt",
+        "name": "Äußere Neustadt",
+        "place": "suburb",
+        "wikidata": "Q8894",
+        "wikipedia": "de:Äußere Neustadt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7528113,
+          51.0671858
+        ]
+      },
+      "id": "node/528083279"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/528083282",
+        "name": "Leipziger Vorstadt",
+        "place": "suburb",
+        "wikidata": "Q1815646",
+        "wikipedia": "de:Leipziger Vorstadt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7456304,
+          51.0742716
+        ]
+      },
+      "id": "node/528083282"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/549219774",
+        "addr:city": "Struppen",
+        "name": "Strand",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.073065,
+          50.9397755
+        ]
+      },
+      "id": "node/549219774"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/579828505",
+        "is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Großzschachwitz",
+        "name:hsb": "Čachecy",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8391166,
+          51.0015845
+        ]
+      },
+      "id": "node/579828505"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/895744229",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Loschwitz",
+        "place": "suburb",
+        "wikidata": "Q8939",
+        "wikipedia": "de:Loschwitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8154546,
+          51.0555235
+        ]
+      },
+      "id": "node/895744229"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/895744233",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Krieschendorf",
+        "place": "suburb",
+        "wikidata": "Q1773752",
+        "wikipedia": "de:Krieschendorf"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8856378,
+          51.0234303
+        ]
+      },
+      "id": "node/895744233"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/895744237",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Hellerberge",
+        "name:ru": "Хеллерберге",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7471755,
+          51.0978519
+        ]
+      },
+      "id": "node/895744237"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/895744244",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Radeberger Vorstadt",
+        "place": "suburb",
+        "wikidata": "Q2125486",
+        "wikipedia": "de:Radeberger Vorstadt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7747478,
+          51.0689995
+        ]
+      },
+      "id": "node/895744244"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/895744245",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Weißer Hirsch",
+        "place": "suburb",
+        "wikidata": "Q8956",
+        "wikipedia": "de:Weißer Hirsch"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8226878,
+          51.0641586
+        ]
+      },
+      "id": "node/895744245"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/895744249",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Oberpoyritz",
+        "place": "suburb",
+        "wikidata": "Q2010639",
+        "wikipedia": "de:Oberpoyritz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8954496,
+          51.0028442
+        ]
+      },
+      "id": "node/895744249"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/895744253",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Niederpoyritz",
+        "place": "suburb",
+        "wikidata": "Q1425961",
+        "wikipedia": "de:Niederpoyritz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8456531,
+          51.0299881
+        ]
+      },
+      "id": "node/895744253"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/895744256",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Wachwitz",
+        "place": "suburb",
+        "wikidata": "Q2538540",
+        "wikipedia": "de:Wachwitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8314672,
+          51.0382067
+        ]
+      },
+      "id": "node/895744256"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/895744259",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Bühlau",
+        "name:hsb": "Běła",
+        "old_name": "Biehla",
+        "place": "suburb",
+        "wikidata": "Q13427151",
+        "wikipedia": "de:Bühlau (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8511298,
+          51.0625884
+        ]
+      },
+      "id": "node/895744259"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/895744261",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Albertstadt",
+        "place": "suburb",
+        "wikidata": "Q8893",
+        "wikipedia": "de:Albertstadt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7543265,
+          51.0793519
+        ]
+      },
+      "id": "node/895744261"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/896347427",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Zschertnitz",
+        "place": "suburb",
+        "wikidata": "Q8957",
+        "wikipedia": "de:Zschertnitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7452947,
+          51.022299
+        ]
+      },
+      "id": "node/896347427"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/896347428",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Omsewitz",
+        "place": "suburb",
+        "wikidata": "Q8944",
+        "wikipedia": "de:Omsewitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6589564,
+          51.0542551
+        ]
+      },
+      "id": "node/896347428"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/896347429",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Leutewitz",
+        "place": "suburb",
+        "wikidata": "Q1821636",
+        "wikipedia": "de:Leutewitz (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6713108,
+          51.0564997
+        ]
+      },
+      "id": "node/896347429"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/896347431",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Wölfnitz",
+        "place": "suburb",
+        "wikidata": "Q2596418",
+        "wikipedia": "de:Wölfnitz (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6777302,
+          51.0403342
+        ]
+      },
+      "id": "node/896347431"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/896347440",
+        "name": "Seevorstadt",
+        "place": "suburb",
+        "wikidata": "Q8952",
+        "wikipedia": "de:Seevorstadt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7338551,
+          51.0438327
+        ]
+      },
+      "id": "node/896347440"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/896347446",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Gostritz",
+        "place": "suburb",
+        "wikidata": "Q1538647",
+        "wikipedia": "de:Gostritz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7494315,
+          51.0100849
+        ]
+      },
+      "id": "node/896347446"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/896347448",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Kleinpestitz",
+        "place": "suburb",
+        "wikidata": "Q8925",
+        "wikipedia": "de:Kleinpestitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7351584,
+          51.0173648
+        ]
+      },
+      "id": "node/896347448"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/896347449",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Coschütz",
+        "place": "suburb",
+        "wikidata": "Q8898",
+        "wikipedia": "de:Coschütz (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7014868,
+          51.0173107
+        ]
+      },
+      "id": "node/896347449"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/896347454",
+        "name": "Kauscha",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7779251,
+          50.9929409
+        ]
+      },
+      "id": "node/896347454"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/896347458",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Neugruna",
+        "place": "suburb",
+        "wikidata": "Q1230786",
+        "wikipedia": "de:Neugruna"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.811145,
+          51.0440325
+        ]
+      },
+      "id": "node/896347458"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/896347463",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Torna",
+        "place": "suburb",
+        "wikidata": "Q2444201",
+        "wikipedia": "de:Torna (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7780781,
+          51.007275
+        ]
+      },
+      "id": "node/896347463"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/896347466",
+        "name": "Niedergohlis",
+        "place": "suburb",
+        "wikidata": "Q110289285"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6425258,
+          51.0936452
+        ]
+      },
+      "id": "node/896347466"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/896347477",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Reick",
+        "place": "suburb",
+        "wikidata": "Q2139856",
+        "wikipedia": "de:Reick"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7939453,
+          51.0133206
+        ]
+      },
+      "id": "node/896347477"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/896347481",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Wilsdruffer Vorstadt",
+        "place": "suburb",
+        "wikidata": "Q1286088",
+        "wikipedia": "de:Wilsdruffer Vorstadt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7255823,
+          51.0511677
+        ]
+      },
+      "id": "node/896347481"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/896347502",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Roßthal",
+        "place": "suburb",
+        "wikidata": "Q2171376",
+        "wikipedia": "de:Roßthal (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6755363,
+          51.0330959
+        ]
+      },
+      "id": "node/896347502"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/896347505",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Mockritz",
+        "place": "suburb",
+        "wikidata": "Q8943",
+        "wikipedia": "de:Mockritz (Dresden)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7417152,
+          51.0148803
+        ]
+      },
+      "id": "node/896347505"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/896347509",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Räcknitz",
+        "place": "suburb",
+        "wikidata": "Q1252764",
+        "wikipedia": "de:Räcknitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7333866,
+          51.0251896
+        ]
+      },
+      "id": "node/896347509"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/896347513",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Pirnaische Vorstadt",
+        "place": "suburb",
+        "wikidata": "Q8947",
+        "wikipedia": "de:Pirnaische Vorstadt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7495667,
+          51.0489849
+        ]
+      },
+      "id": "node/896347513"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/896347523",
+        "is_in": "Dresden,Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Leubnitz-Neuostra",
+        "place": "suburb",
+        "wikidata": "Q8938",
+        "wikipedia": "de:Leubnitz-Neuostra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7656363,
+          51.0117209
+        ]
+      },
+      "id": "node/896347523"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/896347533",
+        "name": "Gittersee",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6921953,
+          51.0111467
+        ]
+      },
+      "id": "node/896347533"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/982909961",
+        "name": "Proschwitz",
+        "place": "suburb",
+        "wikidata": "Q2113208",
+        "wikipedia": "de:Proschwitz (Meißen)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4761673,
+          51.1787884
+        ]
+      },
+      "id": "node/982909961"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/982909962",
+        "name": "Zaschendorf",
+        "place": "suburb",
+        "wikidata": "Q148186",
+        "wikipedia": "de:Zaschendorf (Meißen)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5132859,
+          51.1527893
+        ]
+      },
+      "id": "node/982909962"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/982909963",
+        "name": "Korbitz",
+        "place": "suburb",
+        "wikidata": "Q1784261",
+        "wikipedia": "de:Korbitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4484123,
+          51.1529494
+        ]
+      },
+      "id": "node/982909963"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/982909964",
+        "name": "Vorbrücke",
+        "place": "suburb",
+        "wikidata": "Q2533654",
+        "wikipedia": "de:Vorbrücke"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4817815,
+          51.165305
+        ]
+      },
+      "id": "node/982909964"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/982909966",
+        "name": "Zscheila",
+        "place": "suburb",
+        "wikidata": "Q227230",
+        "wikipedia": "de:Zscheila"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4887724,
+          51.1717378
+        ]
+      },
+      "id": "node/982909966"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/982909968",
+        "name": "Siebeneichen",
+        "place": "suburb",
+        "wikidata": "Q1504268",
+        "wikipedia": "de:Siebeneichen (Meißen)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4809604,
+          51.1490326
+        ]
+      },
+      "id": "node/982909968"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/982909969",
+        "name": "Bohnitzsch",
+        "place": "suburb",
+        "wikidata": "Q890863",
+        "wikipedia": "de:Bohnitzsch"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4971196,
+          51.177126
+        ]
+      },
+      "id": "node/982909969"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/982909970",
+        "name": "Niederfähre",
+        "place": "suburb",
+        "wikidata": "Q1424653",
+        "wikipedia": "de:Niederfähre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4770721,
+          51.1675965
+        ]
+      },
+      "id": "node/982909970"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/982909971",
+        "name": "Obermeisa",
+        "place": "suburb",
+        "wikidata": "Q2010401",
+        "wikipedia": "de:Obermeisa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4515074,
+          51.1649474
+        ]
+      },
+      "id": "node/982909971"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/982909972",
+        "image": "https://commons.wikimedia.org/wiki/File:AS_Niederspaar_mit_Blick_auf_den_Dom_Mei%C3%9Fen.jpg",
+        "name": "Niederspaar",
+        "place": "suburb",
+        "wikidata": "Q1988482",
+        "wikipedia": "de:Niederspaar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4935381,
+          51.1522369
+        ]
+      },
+      "id": "node/982909972"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/982909973",
+        "name": "Klostergasse",
+        "place": "suburb",
+        "wikidata": "Q1776394",
+        "wikipedia": "de:Klostergasse (Meißen)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4661901,
+          51.1697782
+        ]
+      },
+      "id": "node/982909973"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/982909974",
+        "check_date": "2024-03-16",
+        "name": "Lercha",
+        "place": "suburb",
+        "wikidata": "Q1820205",
+        "wikipedia": "de:Lercha"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4681041,
+          51.1475048
+        ]
+      },
+      "id": "node/982909974"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/982909975",
+        "name": "Questenberg",
+        "place": "suburb",
+        "wikidata": "Q2122982",
+        "wikipedia": "de:Questenberg (Meißen)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4588122,
+          51.1572193
+        ]
+      },
+      "id": "node/982909975"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/982909976",
+        "name": "Altstadt",
+        "place": "suburb",
+        "wikidata": "Q445517",
+        "wikipedia": "de:Altstadt (Meißen)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4707876,
+          51.164854
+        ]
+      },
+      "id": "node/982909976"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/982909977",
+        "name": "Cölln",
+        "place": "suburb",
+        "wikidata": "Q1151044",
+        "wikipedia": "de:Cölln (Meißen)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4877715,
+          51.1603114
+        ]
+      },
+      "id": "node/982909977"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/982909978",
+        "name": "Triebischtal",
+        "place": "suburb",
+        "wikidata": "Q2452867",
+        "wikipedia": "de:Triebischtal (Meißen)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4591312,
+          51.1486356
+        ]
+      },
+      "id": "node/982909978"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/982909979",
+        "name": "Oberspaar",
+        "place": "suburb",
+        "wikidata": "Q1724866",
+        "wikipedia": "de:Oberspaar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.49921,
+          51.1492912
+        ]
+      },
+      "id": "node/982909979"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/982909980",
+        "name": "Klosterhäuser",
+        "place": "suburb",
+        "wikidata": "Q1776412",
+        "wikipedia": "de:Klosterhäuser (Meißen)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4557629,
+          51.1740793
+        ]
+      },
+      "id": "node/982909980"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1203200995",
+        "name": "Bad Gottleuba",
+        "name:prefix": "Kurort",
+        "place": "suburb",
+        "wikidata": "Q15096880",
+        "wikimedia_commons": "Category:Bad Gottleuba"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9445243,
+          50.851423
+        ]
+      },
+      "id": "node/1203200995"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1561543105",
+        "name": "Feldschlößchen",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9154813,
+          51.1395588
+        ]
+      },
+      "id": "node/1561543105"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1561543341",
+        "ele": "250",
+        "name": "Radeberg",
+        "name:ar": "رادبرغ",
+        "name:fa": "رادبرگ",
+        "name:ru": "Радеберг",
+        "openGeoDB:community_identification_number": "14292445",
+        "openGeoDB:is_in_loc_id": "263",
+        "openGeoDB:layer": "6",
+        "openGeoDB:license_plate_code": "KM",
+        "openGeoDB:loc_id": "22739",
+        "openGeoDB:telephone_area_code": "03528",
+        "place": "town",
+        "population": "18153",
+        "postal_code": "01454",
+        "wikidata": "Q81729",
+        "wikipedia": "de:Radeberg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9175257,
+          51.1151413
+        ]
+      },
+      "id": "node/1561543341"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1608181903",
+        "addr:city": "Bad Schandau",
+        "addr:country": "DE",
+        "name": "Prossen",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1147956,
+          50.931162
+        ]
+      },
+      "id": "node/1608181903"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1624943836",
+        "is_in": "Stolpen,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Lauterbach",
+        "place": "suburb",
+        "postal_code": "01833"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1128062,
+          51.0683362
+        ]
+      },
+      "id": "node/1624943836"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1624947421",
+        "is_in": "Großharthau,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Bühlau",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1048714,
+          51.087305
+        ]
+      },
+      "id": "node/1624947421"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1624947422",
+        "is_in": "Bischofswerda,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Goldbach",
+        "name:hsb": "Kadłobja",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1424585,
+          51.1189075
+        ]
+      },
+      "id": "node/1624947422"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1627065532",
+        "alt_name": "Freital-Birkigt",
+        "name": "Birkigt",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.67759,
+          51.0112482
+        ]
+      },
+      "id": "node/1627065532"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1627065536",
+        "alt_name": "Freital-Niederhäslich",
+        "name": "Niederhäslich",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6651092,
+          50.9888388
+        ]
+      },
+      "id": "node/1627065536"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1627065539",
+        "alt_name": "Freital-Hainsberg",
+        "name": "Hainsberg",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6326496,
+          50.9835604
+        ]
+      },
+      "id": "node/1627065539"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1627065544",
+        "alt_name": "Freital-Deuben",
+        "name": "Deuben",
+        "place": "suburb",
+        "wikidata": "Q6358",
+        "wikipedia": "de:Deuben (Freital)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6456544,
+          50.9961024
+        ]
+      },
+      "id": "node/1627065544"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1627065551",
+        "alt_name": "Freital-Zauckerode",
+        "name": "Zauckerode",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6396931,
+          51.0174579
+        ]
+      },
+      "id": "node/1627065551"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1627065552",
+        "alt_name": "Freital-Schweinsdorf",
+        "name": "Schweinsdorf",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6521772,
+          50.9897462
+        ]
+      },
+      "id": "node/1627065552"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1627065553",
+        "alt_name": "Freital-Burgk",
+        "name": "Burgk",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.669471,
+          51.0024415
+        ]
+      },
+      "id": "node/1627065553"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1627065559",
+        "alt_name": "Freital-Potschappel",
+        "name": "Potschappel",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.662626,
+          51.0131482
+        ]
+      },
+      "id": "node/1627065559"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1627065563",
+        "alt_name": "Freital-Somsdorf",
+        "name": "Somsdorf",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6041243,
+          50.9763786
+        ]
+      },
+      "id": "node/1627065563"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1627065568",
+        "alt_name": "Freital-Coßmannsdorf",
+        "name": "Coßmannsdorf",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6249545,
+          50.9763653
+        ]
+      },
+      "id": "node/1627065568"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1627065569",
+        "alt_name": "Freital-Döhlen",
+        "name": "Döhlen",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6475354,
+          51.0070347
+        ]
+      },
+      "id": "node/1627065569"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1669366545",
+        "is_in": "Dresden,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Kleinzschachwitz",
+        "place": "suburb",
+        "population": "8540",
+        "website": "https://www.dresden.de/",
+        "wikidata": "Q8926",
+        "wikipedia": "de:Kleinzschachwitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.854418,
+          51.009631
+        ]
+      },
+      "id": "node/1669366545"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1689233464",
+        "is_in": "Freital,Sachsen,Bundesrepublik Deutschland,Europe",
+        "name": "Kohlsdorf",
+        "place": "suburb",
+        "wikidata": "Q1652541",
+        "wikipedia": "de:Kohlsdorf (Freital)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6341871,
+          51.031278
+        ]
+      },
+      "id": "node/1689233464"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1722333426",
+        "is_in": "Hohnstein",
+        "name": "Sachsenbergsiedlung",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1285121,
+          50.9809657
+        ]
+      },
+      "id": "node/1722333426"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1990672131",
+        "name": "Braunsdorf",
+        "note": "population nach Wikipedia",
+        "place": "suburb",
+        "population": "650",
+        "wikidata": "Q902083",
+        "wikipedia": "de:Braunsdorf (Wilsdruff)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5731578,
+          51.0168066
+        ]
+      },
+      "id": "node/1990672131"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1990672135",
+        "name": "Oberhermsdorf",
+        "place": "suburb",
+        "population": "549",
+        "wikidata": "Q2009825",
+        "wikipedia": "de:Oberhermsdorf"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5906341,
+          51.019936
+        ]
+      },
+      "id": "node/1990672135"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2055718744",
+        "image": "http://wiki.openstreetmap.org/wiki/File:2012_Blick_auf_Dippoldiswalde.jpg",
+        "name": "Dippoldiswalde",
+        "place": "town",
+        "population": "5039",
+        "reg_name": "Dipps",
+        "source": "2017 http://www.dippoldiswalde.de/inhalte/dippoldiswalde/_inhalt/dippoldiswalde/zahlen_fakten/statistiken/statistiken",
+        "website": "https://www.dippoldiswalde.de",
+        "wikidata": "Q6462",
+        "wikipedia": "de:Dippoldiswalde"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6633335,
+          50.8950479
+        ]
+      },
+      "id": "node/2055718744"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2168598659",
+        "addr:city": "Bad Schandau",
+        "name": "Waltersdorf",
+        "place": "suburb",
+        "wikidata": "Q1725390",
+        "wikipedia": "de:Waltersdorf (Bad Schandau)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1071541,
+          50.9496785
+        ]
+      },
+      "id": "node/2168598659"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2234985940",
+        "name": "Fischergasse",
+        "place": "suburb",
+        "wikidata": "Q1420055",
+        "wikipedia": "de:Fischergasse (Meißen)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4686898,
+          51.1705519
+        ]
+      },
+      "id": "node/2234985940"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2234992490",
+        "name": "Klostergut",
+        "place": "suburb",
+        "wikidata": "Q1282233",
+        "wikipedia": "de:Kloster Heilig Kreuz (Meißen)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4585254,
+          51.1721838
+        ]
+      },
+      "id": "node/2234992490"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2235019383",
+        "name": "Neudörfchen",
+        "place": "suburb",
+        "wikidata": "Q1979431",
+        "wikipedia": "de:Neudörfchen (Meißen)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.480133,
+          51.152826
+        ]
+      },
+      "id": "node/2235019383"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2412251960",
+        "name": "Saalhausen",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6161191,
+          51.0112972
+        ]
+      },
+      "id": "node/2412251960"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2708387360",
+        "name": "Rähnitz",
+        "place": "suburb",
+        "wikidata": "Q1563739",
+        "wikipedia": "de:Rähnitz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7371476,
+          51.1189656
+        ]
+      },
+      "id": "node/2708387360"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2730508870",
+        "is_in": "Heidenau",
+        "name": "Gommern",
+        "place": "suburb",
+        "source": "OSM Notes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8443572,
+          50.9801966
+        ]
+      },
+      "id": "node/2730508870"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2730508903",
+        "is_in": "Heidenau",
+        "name": "Mügeln",
+        "place": "suburb",
+        "source": "OSM Notes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8716349,
+          50.980018
+        ]
+      },
+      "id": "node/2730508903"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2730509604",
+        "is_in": "Heidenau",
+        "name": "Kleinsedlitz",
+        "place": "suburb",
+        "source": "OSM Notes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8819169,
+          50.9589817
+        ]
+      },
+      "id": "node/2730509604"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2730995161",
+        "name": "Zehista",
+        "place": "suburb",
+        "wikidata": "Q184505",
+        "wikipedia": "de:Zehista"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9245568,
+          50.9372257
+        ]
+      },
+      "id": "node/2730995161"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2733368406",
+        "name": "Mülbitz",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5298034,
+          51.280625
+        ]
+      },
+      "id": "node/2733368406"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2733369105",
+        "name": "Zschieschen",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5212774,
+          51.2831179
+        ]
+      },
+      "id": "node/2733369105"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2796645928",
+        "name": "Kötitz",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.57257,
+          51.1189743
+        ]
+      },
+      "id": "node/2796645928"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2796648141",
+        "name": "Neucoswig",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5974731,
+          51.1315615
+        ]
+      },
+      "id": "node/2796648141"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2895908324",
+        "name": "Niedermeisa",
+        "place": "suburb",
+        "wikidata": "Q1988260",
+        "wikipedia": "de:Niedermeisa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4684959,
+          51.1664801
+        ]
+      },
+      "id": "node/2895908324"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2917385439",
+        "name": "Stenz",
+        "place": "suburb",
+        "wikidata": "Q51396196",
+        "wikipedia": "de:Stenz (Königsbrück)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.889241,
+          51.2657001
+        ]
+      },
+      "id": "node/2917385439"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2991948340",
+        "name": "Rottwerndorf",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9620763,
+          50.9246168
+        ]
+      },
+      "id": "node/2991948340"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3323980673",
+        "name": "Löbsal",
+        "place": "suburb",
+        "population": "40",
+        "website": "https://www.diera-zehren.de/",
+        "wikidata": "Q1296218",
+        "wikipedia": "de:Löbsal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4340096,
+          51.2275475
+        ]
+      },
+      "id": "node/3323980673"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4155919789",
+        "name": "Triebischvorstadt",
+        "place": "suburb",
+        "wikidata": "Q2452872",
+        "wikipedia": "de:Triebischvorstadt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4734451,
+          51.1613041
+        ]
+      },
+      "id": "node/4155919789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4155919790",
+        "name": "Görnische Vorstadt",
+        "place": "suburb",
+        "wikidata": "Q1559555"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4695369,
+          51.1592519
+        ]
+      },
+      "id": "node/4155919790"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4155921137",
+        "alt_name": "Rauhental",
+        "name": "Rauenthal",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4614528,
+          51.1585624
+        ]
+      },
+      "id": "node/4155921137"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4155922260",
+        "name": "Kynastsiedlung",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4516088,
+          51.1612372
+        ]
+      },
+      "id": "node/4155922260"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4746597624",
+        "name": "Lotzdorf",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9072405,
+          51.1278999
+        ]
+      },
+      "id": "node/4746597624"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4746597625",
+        "name": "Stadtrandsiedlung",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9541186,
+          51.1282379
+        ]
+      },
+      "id": "node/4746597625"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5178603474",
+        "name": "Ploschwitzer Höhe",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8561418,
+          50.9502493
+        ]
+      },
+      "id": "node/5178603474"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5208714252",
+        "name": "Plossen",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4753163,
+          51.1561389
+        ]
+      },
+      "id": "node/5208714252"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5310616918",
+        "name": "Neundorf",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9798631,
+          50.9168934
+        ]
+      },
+      "id": "node/5310616918"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6255923226",
+        "is_in": "Pulsnitz",
+        "name": "Vollung",
+        "old_name": "Böhmische Vollung",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0112097,
+          51.1752598
+        ]
+      },
+      "id": "node/6255923226"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6255923227",
+        "is_in": "Pulsnitz",
+        "name": "Meißner Seite",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0040247,
+          51.1805494
+        ]
+      },
+      "id": "node/6255923227"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6603100895",
+        "name": "Heidenau-Süd",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8786283,
+          50.97242
+        ]
+      },
+      "id": "node/6603100895"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7416024587",
+        "name": "Dobra",
+        "place": "suburb",
+        "population": "320"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0277826,
+          51.013535
+        ]
+      },
+      "id": "node/7416024587"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7463394203",
+        "name": "Augustusberg",
+        "place": "suburb",
+        "postal_code": "01816"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9552134,
+          50.8432304
+        ]
+      },
+      "id": "node/7463394203"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9156452213",
+        "name": "Dölzschen",
+        "place": "suburb",
+        "wikidata": "Q8904",
+        "wikipedia": "de:Dölzschen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.689257,
+          51.0263636
+        ]
+      },
+      "id": "node/9156452213"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10556527138",
+        "name": "Röderhäuser",
+        "place": "suburb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0624279,
+          51.1647262
+        ]
+      },
+      "id": "node/10556527138"
+    }
+  ]
+}

@@ -4,6 +4,11 @@ from bs4 import BeautifulSoup as bs
 import openrouteservice  # Für die Berechnung der Distanzen
 import secret_api   # eigene Datei mit API. Dateiinhalt:   api="5b3c....."
 import time
+import codecs
+import json
+
+Benutze_wikipedia = False
+
 
 def distanzen_berechnen(Start,Ende,datei):
     coords=(Start,Ende)
@@ -17,69 +22,79 @@ def distanzen_berechnen(Start,Ende,datei):
     return round(int(distanz)/1000,2), int(dauer) 
 
 
-tables=pd.read_csv("wikipedia_download_liste.csv")
-df=tables
+
 
 Namen_arr,URL_arr=[],[]
 Long_arr,Lat_arr=[],[]
 
-for index,row in enumerate(df["Name"]):
-    print(index,"ROHE REIHE",row)
+if Benutze_wikipedia:
+    tables=pd.read_csv("wikipedia_download_liste.csv")
+    df=tables
+    for index,row in enumerate(df["Name"]):
+        print(index,"ROHE REIHE",row)
 
-    row=row.replace("'","")
-    Werte=row.split(", ")
+        row=row.replace("'","")
+        Werte=row.split(", ")
+        
+        Name=Werte[0]
+        Name=Name.replace("(","")
+        Name=Name.replace(")","")    
+
+        URL = "https://de.wikipedia.org"+Werte[1]
+        URL = URL.replace("))",")")  
+
+        URL_extract=Werte[1]
+        if URL_extract.find("(")>-1:
+            URL_extract=URL_extract.replace("))",")")  
+        else:
+            URL_extract=URL_extract.replace(")","")  
+
+        # Sonderzeichen ersetzen
+        URL_extract=URL_extract.replace("/wiki/","")
+        URL_extract=URL_extract.replace("%C3%A4","ä")   
+        URL_extract=URL_extract.replace("%C3%BC","ü")
+        URL_extract=URL_extract.replace("%C3%B6","ö")
+        URL_extract=URL_extract.replace("%C3%9F","ß")
+
+        URL_API = "https://de.wikipedia.org/w/api.php"  # deutsche API Endstelle
+
+        PARAMS = {
+            "action": "query",
+            "format": "json",
+            "titles": URL_extract, # Der Name des Wikipedia Artikels
+            "prop": "coordinates"
+        }
+        S = requests.Session()
+
+        # Abfrage der Koordinaten in Wikipedia
+        print(Name,URL,"URL_Extract: ",URL_extract)
+        R = S.get(url=URL_API, params=PARAMS)
+        DATA = R.json()
+        PAGES = DATA['query']['pages']
+        for k, v in PAGES.items():
+            try:
+                latitude=float(v['coordinates'][0]['lat'])
+                longitude=float(v['coordinates'][0]['lon'])
+                Namen_arr.append(Name)
+                Long_arr.append(longitude)
+                Lat_arr.append(latitude)
+                URL_arr.append(URL)
+                print(latitude,longitude)
+
+            except:
+                print("Problem, keine Koordinaten gefunden.")
+        print("----------------------")
+        PD_Adressen=pd.DataFrame(data={"Name":Namen_arr,"Lat":Lat_arr,"Long":Long_arr,"URL":URL_arr})
+
+else:
+    with codecs.open("stadtteil_zentrum.geojson", 'r', encoding='utf-8') as f:
+        stadtteile_overpass=json.load(f)
     
-    Name=Werte[0]
-    Name=Name.replace("(","")
-    Name=Name.replace(")","")    
-
-    URL = "https://de.wikipedia.org"+Werte[1]
-    URL = URL.replace("))",")")  
-
-    URL_extract=Werte[1]
-    if URL_extract.find("(")>-1:
-        URL_extract=URL_extract.replace("))",")")  
-    else:
-        URL_extract=URL_extract.replace(")","")  
-
-    # Sonderzeichen ersetzen
-    URL_extract=URL_extract.replace("/wiki/","")
-    URL_extract=URL_extract.replace("%C3%A4","ä")   
-    URL_extract=URL_extract.replace("%C3%BC","ü")
-    URL_extract=URL_extract.replace("%C3%B6","ö")
-    URL_extract=URL_extract.replace("%C3%9F","ß")
-
-    URL_API = "https://de.wikipedia.org/w/api.php"  # deutsche API Endstelle
-
-    PARAMS = {
-        "action": "query",
-        "format": "json",
-        "titles": URL_extract, # Der Name des Wikipedia Artikels
-        "prop": "coordinates"
-    }
-    S = requests.Session()
-
-    # Abfrage der Koordinaten in Wikipedia
-    print(Name,URL,"URL_Extract: ",URL_extract)
-    R = S.get(url=URL_API, params=PARAMS)
-    DATA = R.json()
-    PAGES = DATA['query']['pages']
-    for k, v in PAGES.items():
-        try:
-            latitude=float(v['coordinates'][0]['lat'])
-            longitude=float(v['coordinates'][0]['lon'])
-            Namen_arr.append(Name)
-            Long_arr.append(longitude)
-            Lat_arr.append(latitude)
-            URL_arr.append(URL)
-            print(latitude,longitude)
-
-        except:
-            print("Problem, keine Koordinaten gefunden.")
-    print("----------------------")
-
-
-PD_Adressen=pd.DataFrame(data={"Name":Namen_arr,"Lat":Lat_arr,"Long":Long_arr,"URL":URL_arr})
+    for stadtteil in stadtteile_overpass["features"]:
+        Namen_arr.append(stadtteil["properties"]["name"])
+        Lat_arr.append(stadtteil["geometry"]["coordinates"][0])
+        Long_arr.append(stadtteil["geometry"]["coordinates"][1])
+    PD_Adressen=pd.DataFrame(data={"Name":Namen_arr,"Lat":Lat_arr,"Long":Long_arr})
 
 ### Distanzen bestimmen
 print("\n\n\n-----------------------------")
