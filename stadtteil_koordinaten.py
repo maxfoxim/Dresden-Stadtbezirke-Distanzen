@@ -9,12 +9,12 @@ import json
 import openpyxl
 
 Benutze_wikipedia = False
-
+Fortbewegung='driving-car'  #'foot-walking',  'driving-car' 'cycling-regular'
 
 def distanzen_berechnen(Start,Ende,datei):
     coords=(Start,Ende)
     client = openrouteservice.Client(key=secret_api.api) # Specify your personal API key
-    ausgabe = client.directions(coords,profile='cycling-regular',geometry= 'true',format_out="geojson")
+    ausgabe = client.directions(coords,profile=Fortbewegung,geometry= 'true',format_out="geojson")
     #print(ausgabe)
     distanz=ausgabe["features"][0]["properties"]["summary"]["distance"]
     dauer=ausgabe["features"][0]["properties"]["summary"]["duration"]/60.
@@ -143,10 +143,10 @@ for index,row in PD_Adressen.iterrows(): # die Gebiete durchgehen
     #Zwischenspeichern
     if counter%5==0:
         print("Neu gespeichert.")
-        PD_Adressen.to_csv("Gebiets_Adresse.csv")
-        PD_Adressen.to_excel("Gebiets_Adresse.xlsx")
+        PD_Adressen.to_csv("Gebiets_Adresse_"+Fortbewegung+".csv")
+        PD_Adressen.to_excel("Gebiets_Adresse_"+Fortbewegung+".xlsx")
 
 
 # Letztes Speichern
-PD_Adressen.to_csv("Gebiets_Adresse.csv")
-PD_Adressen.to_excel("Gebiets_Adresse.xlsx")
+PD_Adressen.to_csv("Gebiets_Adresse_"+Fortbewegung+".csv")
+PD_Adressen.to_excel("Gebiets_Adresse_"+Fortbewegung+".xlsx")

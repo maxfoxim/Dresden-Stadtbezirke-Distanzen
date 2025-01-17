@@ -8,7 +8,8 @@ import geopandas
 """ 
 Ideen:
 Aufteilung nach Fahrrad, Auto
-Überlapp aller Ziele 
+Überlapp aller Ziele mit Gewichtung
+Farbskala der Gesamtzeiten
 """
 
 # Gewünschte Zieladressen
