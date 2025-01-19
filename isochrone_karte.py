@@ -17,10 +17,10 @@ Ziel_Adressen={
     #"Zu_Hause":[51.05885076550623, 13.766713420144118],
     "Robotron":[51.010042433360255, 13.701267488585485],
     "Schule":[50.99507147504863, 13.80808908738222],
-    "Kletterarena":[51.040951530745545, 13.715802737639914],
-    "Großeltern":[51.05654509189485, 13.895285953791621],
+    #"Kletterarena":[51.040951530745545, 13.715802737639914],
+    #"Großeltern":[51.05654509189485, 13.895285953791621],
     #"Dresden Zentrum":[51.05054037636587, 13.736688817986499],
-    "Johanna": [51.04399714777088, 13.812859847360748]
+    #"Johanna": [51.04399714777088, 13.812859847360748]
 }
 
 client = ors.Client(key=secret_api.api)
@@ -28,15 +28,16 @@ client = ors.Client(key=secret_api.api)
 m = folium.Map(location=[51.05885076550623, 13.766713420144118], tiles='OpenStreetMap', zoom_start=13)
 
 farben = ["00ff00","lightgreen","red","orange","pink","darkgreen"]
-geo_dict={"name":[],"geometry":[]}
+geo_dict={"name":[],"geometry":[],"range_value":[],"count":[]}
 geo_arrays = []
 i=0
+counter=0
 for coordi in Ziel_Adressen:
     print(i,coordi,farben[i])
     iso = client.isochrones(
     locations=[Ziel_Adressen[coordi][::-1]],
     profile='driving-car',  #'foot-walking',  'driving-car' 'cycling-regular'
-    range=[1800],#,900,1200,1500,1800],  # Seconds
+    range=[1800,900],#,900,1200,1500,1800],  # Seconds
     validate=False
     )
 
@@ -47,6 +48,9 @@ for coordi in Ziel_Adressen:
         locations=[list(reversed(coord)) for coord in isochrone['geometry']['coordinates'][0]]
         #print("locations",locations)
         geo_dict["name"].append(coordi)
+        geo_dict["range_value"].append(int(isochrone["properties"]["value"]))
+        geo_dict["count"].append(counter)
+        counter = counter +1
         lat=[ i[1] for i in locations]
         long=[ i[0] for i in locations]
         polygon_geom = Polygon(zip(lat,long))
@@ -70,14 +74,19 @@ for coordi in Ziel_Adressen:
     i=i+1
 
 
+#Polygone in Geopandas überführen
 polygon_df = geopandas.GeoDataFrame(data=geo_dict, crs='epsg:4326',index=geo_dict["name"])#, geometry=[polygon_geom])       
 
 print("DF: ",polygon_df)
 
-ausgabe=polygon_df["geometry"].loc["Robotron"]
+# Berechne Überschneindungen
+#ausgabe=polygon_df["geometry"].loc[ (polygon_df["name"] == "Robotron") & (polygon_df["range_value"] == 900)]
+ausgabe=polygon_df["geometry"].loc[ (polygon_df["count"] == 0)]
 
-for namen in polygon_df["name"]:
-    ausgabe=ausgabe.intersection(polygon_df["geometry"].loc[namen])
+
+print("Ausgabe",ausgabe)
+for count in polygon_df["count"]:
+    ausgabe=ausgabe.intersection(polygon_df["geometry"].loc[(polygon_df["count"] == count)],align=False)
 
 folium.GeoJson(ausgabe,fillColor="red",color="red",name="Overlap").add_to(m)
  

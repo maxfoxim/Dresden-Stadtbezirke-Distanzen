@@ -11,6 +11,18 @@ import openpyxl
 Benutze_wikipedia = False
 Fortbewegung='driving-car'  #'foot-walking',  'driving-car' 'cycling-regular'
 
+# Gewünschte Zieladressen
+Ziel_Adressen={
+    "Zu_Hause":[51.05885076550623, 13.766713420144118],
+    "Robotron":[51.010042433360255, 13.701267488585485],
+    "Schule":[50.99507147504863, 13.80808908738222],
+    "Kletterarena":[51.040951530745545, 13.715802737639914],
+    "Großeltern":[51.05654509189485, 13.895285953791621],
+    "Dresden Zentrum":[51.05054037636587, 13.736688817986499]
+}
+
+######### ######### ######### #########
+
 def distanzen_berechnen(Start,Ende,datei):
     coords=(Start,Ende)
     client = openrouteservice.Client(key=secret_api.api) # Specify your personal API key
@@ -104,16 +116,6 @@ else: #Berechne mit OVerpass Daten
 
 ### Distanzen bestimmen
 print("\n\n\n-----------------------------")
-
-# Gewünschte Zieladressen
-Ziel_Adressen={
-    "Zu_Hause":[51.05885076550623, 13.766713420144118],
-    "Robotron":[51.010042433360255, 13.701267488585485],
-    "Schule":[50.99507147504863, 13.80808908738222],
-    "Kletterarena":[51.040951530745545, 13.715802737639914],
-    "Großeltern":[51.05654509189485, 13.895285953791621],
-    "Dresden Zentrum":[51.05054037636587, 13.736688817986499]
-}
 
 # Initaliserung
 for Ziele in Ziel_Adressen:
