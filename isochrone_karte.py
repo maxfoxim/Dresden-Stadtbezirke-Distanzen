@@ -5,6 +5,7 @@ import secret_api   # eigene Datei mit API. Dateiinhalt:   api="5b3c....."
 import folium
 from shapely.geometry import Polygon, LineString, Point
 import geopandas
+import numpy as np
 """ 
 Ideen:
 Aufteilung nach Fahrrad, Auto
@@ -12,16 +13,46 @@ Aufteilung nach Fahrrad, Auto
 Farbskala der Gesamtzeiten
 """
 
+
+
 # Gewünschte Zieladressen
 Ziel_Adressen={
     #"Zu_Hause":[51.05885076550623, 13.766713420144118],
     "Robotron":[51.010042433360255, 13.701267488585485],
-    "Schule":[50.99507147504863, 13.80808908738222],
+    #"Schule":[50.99507147504863, 13.80808908738222],
     #"Kletterarena":[51.040951530745545, 13.715802737639914],
     #"Großeltern":[51.05654509189485, 13.895285953791621],
     #"Dresden Zentrum":[51.05054037636587, 13.736688817986499],
     #"Johanna": [51.04399714777088, 13.812859847360748]
 }
+
+def erstelle_gitter(Anzahl_Punkte=10):
+    x_links = 13.5
+    x_rechts = 13.97
+    y_oben = 51.2
+    y_unten = 50.91
+        
+    x = np.linspace(x_links, x_rechts, Anzahl_Punkte)
+    y = np.linspace(y_unten, y_oben, Anzahl_Punkte)
+    
+    rechtecke = []
+    i = 0
+    j = 0
+    while i < len(x)-1:
+        while j < len(y)-1:
+            #print(i,j)
+            rechtecke.append(Polygon([
+                            (x[i],y[j]),
+                            (x[i+1],y[j]),
+                            (x[i+1],y[j+1]),
+                            (x[i],y[j+1])]))
+            j=j+1
+        j=0
+        i=i+1
+    
+    return {"name":range(len(rechtecke)),"geometry":rechtecke}
+
+gitter=erstelle_gitter()
 
 client = ors.Client(key=secret_api.api)
 
@@ -76,8 +107,19 @@ for coordi in Ziel_Adressen:
 
 #Polygone in Geopandas überführen
 polygon_df = geopandas.GeoDataFrame(data=geo_dict, crs='epsg:4326',index=geo_dict["name"])#, geometry=[polygon_geom])       
+gitter_df = geopandas.GeoDataFrame( data=gitter,   crs='epsg:4326',index=gitter["name"])#, geometry=[polygon_geom])       
+
+for index_g,gitter in gitter_df.iterrows():
+    for index_u,umkreis in polygon_df.iterrows():
+        #print(index_u,umkreis["geometry"])
+        #print(index_g,gitter)
+        overlap=umkreis["geometry"].overlaps(gitter["geometry"])
+        print(overlap)
+
+folium.GeoJson(gitter_df,fillColor="yellow",color="yellow",name="Gitter").add_to(m)
 
 print("DF: ",polygon_df)
+print("Gitter: ",gitter_df)
 
 # Berechne Überschneindungen
 #ausgabe=polygon_df["geometry"].loc[ (polygon_df["name"] == "Robotron") & (polygon_df["range_value"] == 900)]
