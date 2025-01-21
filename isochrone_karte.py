@@ -6,6 +6,8 @@ import folium
 from shapely.geometry import Polygon, LineString, Point
 import geopandas
 import numpy as np
+from branca.colormap import linear
+import branca.colormap as cm
 """ 
 Ideen:
 Aufteilung nach Fahrrad, Auto
@@ -19,14 +21,14 @@ Farbskala der Gesamtzeiten
 Ziel_Adressen={
     #"Zu_Hause":[51.05885076550623, 13.766713420144118],
     "Robotron":[51.010042433360255, 13.701267488585485],
-    #"Schule":[50.99507147504863, 13.80808908738222],
-    #"Kletterarena":[51.040951530745545, 13.715802737639914],
-    #"Großeltern":[51.05654509189485, 13.895285953791621],
+    "Schule":[50.99507147504863, 13.80808908738222],
+    "Kletterarena":[51.040951530745545, 13.715802737639914],
+    "Großeltern":[51.05654509189485, 13.895285953791621],
     #"Dresden Zentrum":[51.05054037636587, 13.736688817986499],
-    #"Johanna": [51.04399714777088, 13.812859847360748]
+    "Johanna": [51.04399714777088, 13.812859847360748]
 }
 
-def erstelle_gitter(Anzahl_Punkte=10):
+def erstelle_gitter(Anzahl_Punkte=20):
     x_links = 13.5
     x_rechts = 13.97
     y_oben = 51.2
@@ -50,7 +52,8 @@ def erstelle_gitter(Anzahl_Punkte=10):
         j=0
         i=i+1
     
-    return {"name":range(len(rechtecke)),"geometry":rechtecke}
+    range_len = [str(i) for i in range(len(rechtecke))]
+    return {"name":range(len(rechtecke)),"geometry":rechtecke,"id_str":range_len}
 
 gitter=erstelle_gitter()
 
@@ -68,7 +71,7 @@ for coordi in Ziel_Adressen:
     iso = client.isochrones(
     locations=[Ziel_Adressen[coordi][::-1]],
     profile='driving-car',  #'foot-walking',  'driving-car' 'cycling-regular'
-    range=[1800,900],#,900,1200,1500,1800],  # Seconds
+    range=[900,1200,1800],#,900,1200,1500,1800],  # Seconds
     validate=False
     )
 
@@ -100,27 +103,53 @@ for coordi in Ziel_Adressen:
                                        icon='home',
                                        prefix='fa',
                                        ), popup=coordi,).add_to(fg)
-        
-        
+                
     i=i+1
 
 
 #Polygone in Geopandas überführen
 polygon_df = geopandas.GeoDataFrame(data=geo_dict, crs='epsg:4326',index=geo_dict["name"])#, geometry=[polygon_geom])       
 gitter_df = geopandas.GeoDataFrame( data=gitter,   crs='epsg:4326',index=gitter["name"])#, geometry=[polygon_geom])       
+gitter_df["Overlap_Distance"] = 0
 
+# Berechne Überlap zwischen Gitter und Distanzen
 for index_g,gitter in gitter_df.iterrows():
     for index_u,umkreis in polygon_df.iterrows():
         #print(index_u,umkreis["geometry"])
         #print(index_g,gitter)
         overlap=umkreis["geometry"].overlaps(gitter["geometry"])
-        print(overlap)
+        print(index_g,umkreis["range_value"],umkreis["name"],overlap)
 
-folium.GeoJson(gitter_df,fillColor="yellow",color="yellow",name="Gitter").add_to(m)
+        if overlap:
+            gitter_df["Overlap_Distance"].loc[index_g] = umkreis["range_value"]+gitter_df["Overlap_Distance"].loc[index_g]
+            continue
+        
+# Farben für Gitter
+colormap = cm.LinearColormap(["red", "yellow", "green"], vmin=gitter_df.Overlap_Distance.min(), vmax=gitter_df.Overlap_Distance.max(),)
+
+#colormap = linear.YlGn_09.scale(gitter_df.Overlap_Distance.min(), gitter_df.Overlap_Distance.max())
+gitter_dict = gitter_df.set_index("id_str")["Overlap_Distance"]
+print("gitter_dict",gitter_dict[45])
+popup = folium.GeoJsonPopup(fields=["Overlap_Distance"])
+folium.GeoJson(gitter_df,
+               name="Gitter",
+               popup=popup,
+               style_function=lambda feature: {
+                    "fillColor": colormap(gitter_dict[feature["id"]]),
+                    "color": "black",
+                    "weight": 1,
+                    "dashArray": "5, 5",
+                    "fillOpacity": 0.5
+                }
+               ).add_to(m)
+
+colormap.caption = "Dauer"
+colormap.add_to(m)
 
 print("DF: ",polygon_df)
 print("Gitter: ",gitter_df)
 
+gitter_df.to_csv("gitter.csv")
 # Berechne Überschneindungen
 #ausgabe=polygon_df["geometry"].loc[ (polygon_df["name"] == "Robotron") & (polygon_df["range_value"] == 900)]
 ausgabe=polygon_df["geometry"].loc[ (polygon_df["count"] == 0)]

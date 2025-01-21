@@ -8,6 +8,11 @@ import codecs
 import json
 import openpyxl
 
+""" 
+TO DO:
+- Geojson am Ende mit Excelinhalt genieren (mouse over?)
+"""
+
 Benutze_wikipedia = False
 Fortbewegung='driving-car'  #'foot-walking',  'driving-car' 'cycling-regular'
 
@@ -131,7 +136,10 @@ for index,row in PD_Adressen.iterrows(): # die Gebiete durchgehen
         print("GPS: Von",Start," nach ",Ende)
 
         # Berechnung der Distanz und Dauer
-        distanz, dauer=distanzen_berechnen(Start,Ende,None)
+        try:
+            distanz, dauer=distanzen_berechnen(Start,Ende,None)
+        except:
+            distanz, dauer = -1, -1
 
         PD_Adressen.loc[index,Ziele+"_Distanz"]=distanz
         PD_Adressen.loc[index,Ziele+"_Dauer"] = dauer
