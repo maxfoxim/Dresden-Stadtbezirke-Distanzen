@@ -25,7 +25,8 @@ Ziel_Adressen={
     "Kletterarena":[51.040951530745545, 13.715802737639914],
     "Großeltern":[51.05654509189485, 13.895285953791621],
     #"Dresden Zentrum":[51.05054037636587, 13.736688817986499],
-    "Johanna": [51.04399714777088, 13.812859847360748]
+    "Johanna": [51.04399714777088, 13.812859847360748],
+    "Kita":[51.058520,13.788871]
 }
 
 Prio_Wertungen={
@@ -35,7 +36,8 @@ Prio_Wertungen={
     "Kletterarena":1,
     "Großeltern":2,
     #"Dresden Zentrum":[51.05054037636587, 13.736688817986499],
-    "Johanna": 1
+    "Johanna": 1,
+    "Kita":5
 }
 
 def erstelle_gitter(Anzahl_Punkte=20):
