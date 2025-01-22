@@ -15,6 +15,7 @@ Aufteilung nach Fahrrad, Auto
 Farbskala der Gesamtzeiten
 """
 
+dauer_sekunden=[900,1200,1800,2400]
 
 
 # Gewünschte Zieladressen
@@ -35,16 +36,16 @@ Prio_Wertungen={
     "Schule":5,
     "Kletterarena":1,
     "Großeltern":2,
-    #"Dresden Zentrum":[51.05054037636587, 13.736688817986499],
+    "Dresden Zentrum":1,
     "Johanna": 1,
     "Kita":5
 }
 
-def erstelle_gitter(Anzahl_Punkte=20):
+def erstelle_gitter(Anzahl_Punkte=30):
     x_links = 13.5
-    x_rechts = 13.97
+    x_rechts = 14.0
     y_oben = 51.2
-    y_unten = 50.91
+    y_unten = 50.90
         
     x = np.linspace(x_links, x_rechts, Anzahl_Punkte)
     y = np.linspace(y_unten, y_oben, Anzahl_Punkte)
@@ -70,25 +71,23 @@ def erstelle_gitter(Anzahl_Punkte=20):
 gitter=erstelle_gitter()
 
 client = ors.Client(key=secret_api.api)
-
-m = folium.Map(location=[51.05885076550623, 13.766713420144118], tiles='OpenStreetMap', zoom_start=13)
+m = folium.Map(location=[51.05885076550623, 13.766713420144118], tiles='OpenStreetMap', zoom_start=12)
 
 farben = ["00ff00","lightgreen","red","orange","pink","darkgreen"]
 geo_dict={"name":[],"geometry":[],"range_value":[],"count":[]}
-dauer_sekunden=[900,1200,1800]
 geo_arrays = []
 i=0
 counter=0
 for coordi in Ziel_Adressen:
     print(i,coordi,farben[i])
     iso = client.isochrones(
-    locations=[Ziel_Adressen[coordi][::-1]],
+    locations=[Ziel_Adressen[coordi][::-1]], # Koordinaten umdrehen
     profile='driving-car',  #'foot-walking',  'driving-car' 'cycling-regular'
     range=dauer_sekunden,#,900,1200,1500,1800],  # Seconds
     validate=False
     )
 
-    fg = folium.FeatureGroup(name=coordi, control=True, overlay=True).add_to(m)
+    fg = folium.FeatureGroup(name=coordi, control=True, overlay=True, show=False).add_to(m)
 
     for isochrone in iso['features'][::]:
         #print(isochrone)
@@ -98,7 +97,7 @@ for coordi in Ziel_Adressen:
         geo_dict["range_value"].append(int(isochrone["properties"]["value"]))
         geo_dict["count"].append(counter)
         counter = counter +1
-        lat=[ i[1] for i in locations]
+        lat= [ i[1] for i in locations]
         long=[ i[0] for i in locations]
         polygon_geom = Polygon(zip(lat,long))
         geo_dict["geometry"].append(polygon_geom)
@@ -106,8 +105,7 @@ for coordi in Ziel_Adressen:
         
         folium.Polygon(locations=locations,
                     show=False,
-                    fillColor="00ff00",#farben[i],
-                    #color="black",
+                    fillColor="00ff00",
                     popup=folium.Popup(coordi+" "+str(round(isochrone["properties"]["value"]/60)) + " min"),
                     opacity=0.5).add_to(fg)
         
@@ -116,27 +114,29 @@ for coordi in Ziel_Adressen:
                                        icon_color='#cc0000',
                                        icon='home',
                                        prefix='fa',
-                                       ), popup=coordi,).add_to(fg)
+                                       ), popup=coordi,).add_to(m)
                 
     i=i+1
 
 
 #Polygone in Geopandas überführen
 polygon_df = geopandas.GeoDataFrame(data=geo_dict, crs='epsg:4326',index=geo_dict["name"])#, geometry=[polygon_geom])       
-gitter_df = geopandas.GeoDataFrame( data=gitter,   crs='epsg:4326',index=gitter["name"])#, geometry=[polygon_geom])       
+gitter_df =  geopandas.GeoDataFrame(data=gitter,   crs='epsg:4326',index=gitter["name"])#, geometry=[polygon_geom])       
 gitter_df["Overlap_Distance"] = 0
 zwischenspeicher = ""
 AUSSER_REICHWEITE = 4200/60.
+
 # Berechne Überlap zwischen Gitter und Distanzen
 for index_g,gitter in gitter_df.iterrows():
     print("--------------------- ",index_g,"------------------")
     for index_u,umkreis in polygon_df.iterrows():
         #print(index_u,umkreis["geometry"])
         #print(index_g,gitter)
-        overlap=umkreis["geometry"].overlaps(gitter["geometry"])
-        print(umkreis["range_value"],umkreis["name"],overlap)
-
-        if umkreis["range_value"]==dauer_sekunden[-1] and overlap == False and umkreis["name"] != zwischenspeicher:
+        overlap = umkreis["geometry"].intersects(gitter["geometry"])
+        #print(umkreis["range_value"],umkreis["name"],overlap)
+        #print(umkreis["geometry"],gitter["geometry"])
+        # falls keine Distanz reicht setze festen Wert
+        if (umkreis["range_value"]==dauer_sekunden[-1]) and (overlap == False):
             gitter_df["Overlap_Distance"].loc[index_g] = AUSSER_REICHWEITE*Prio_Wertungen[umkreis["name"]] + gitter_df["Overlap_Distance"].loc[index_g]
             print("--Außer Bereich--",umkreis["range_value"],umkreis["name"],AUSSER_REICHWEITE*Prio_Wertungen[umkreis["name"]],gitter_df["Overlap_Distance"].loc[index_g])
             zwischenspeicher = umkreis["name"]
@@ -152,7 +152,8 @@ colormap = cm.LinearColormap(["green", "yellow", "red"], vmin=gitter_df.Overlap_
 
 
 gitter_dict = gitter_df.set_index("id_str")["Overlap_Distance"]
-popup = folium.GeoJsonPopup(fields=["Overlap_Distance"])
+gitter_df["Labels"] = gitter_df["name"].apply(str) +": " + gitter_df["Overlap_Distance"].apply(str)+ " min"
+popup = folium.GeoJsonPopup(fields=["Labels"])
 folium.GeoJson(gitter_df,
                name="Gitter",
                popup=popup,
@@ -170,21 +171,14 @@ colormap.add_to(m)
 
 #print("DF: ",polygon_df)
 #print("Gitter: ",gitter_df)
+#gitter_df.to_csv("gitter.csv")
 
-gitter_df.to_csv("gitter.csv")
 # Berechne Überschneindungen
-#ausgabe=polygon_df["geometry"].loc[ (polygon_df["name"] == "Robotron") & (polygon_df["range_value"] == 900)]
-ausgabe=polygon_df["geometry"].loc[ (polygon_df["count"] == 0)]
-
-
-#print("Ausgabe",ausgabe)
-for count in polygon_df["count"]:
+ausgabe=polygon_df["geometry"].loc[ (polygon_df["name"] == "Robotron") & (polygon_df["range_value"] == dauer_sekunden[-1])]
+for count in polygon_df["count"].loc[polygon_df["range_value"] == dauer_sekunden[-1]]:
     ausgabe=ausgabe.intersection(polygon_df["geometry"].loc[(polygon_df["count"] == count)],align=False)
-
+    print(ausgabe)
 folium.GeoJson(ausgabe,fillColor="red",color="red",name="Overlap").add_to(m)
- 
-#print("Ausgabe",ausgabe)
-
 folium.LayerControl().add_to(m)
 file_name = 'my_folium_map'
 m.save(file_name + '.html')
