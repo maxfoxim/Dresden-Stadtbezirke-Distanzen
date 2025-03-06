@@ -4,3 +4,5 @@ __pycache__/secret_api.cpython-312.pyc
 /*.DS_Store
 cache
 .venv
+__pycache__/secret_api.cpython-39.pyc
+__pycache__/secret_api.cpython-313.pyc
