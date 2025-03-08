@@ -12,6 +12,8 @@ import branca.colormap as cm
 Ideen:
 Aufteilung nach Fahrrad, Auto
 Anzahl relevanter Punkte: Einkaufsmarkt, Haltestellen, 
+Dauer pro Gitterkachel
+Abbuch wenn kleine Isochrone schon drin sind, größere berechnen dann überflüssig
 """
 
 dauer_sekunden=[5*60,10*60,20*60,30*60]
@@ -23,7 +25,7 @@ Ziel_Adressen={
     "Schule":[50.99507147504863, 13.80808908738222],
     "Kletterarena":[51.040951530745545, 13.715802737639914],
     "Großeltern":[51.05654509189485, 13.895285953791621],
-    #"Dresden Zentrum":[51.05054037636587, 13.736688817986499],
+    "Dresden Zentrum":[51.05054037636587, 13.736688817986499],
     "Johanna": [51.04399714777088, 13.812859847360748],
     "Kita":[51.058520,13.788871]
 }
@@ -143,8 +145,10 @@ gitter=erstelle_gitter()
 polygon_df = geopandas.GeoDataFrame(data=geo_dict, crs='epsg:4326',index=geo_dict["name"])#, geometry=[polygon_geom])       
 gitter_df =  geopandas.GeoDataFrame(data=gitter,   crs='epsg:4326',index=  gitter["name"])#, geometry=[polygon_geom])       
 gitter_df["Overlap_Distance"] = 0
+for Interessenspunkt in Ziel_Adressen:
+    gitter_df[Interessenspunkt] = 0
 zwischenspeicher = ""
-AUSSER_REICHWEITE = 4200/60.
+AUSSER_REICHWEITE = 4200/60. # angenomme Dauer falls angegebener Isochronendauer außerhalb liegt. Globales Maximum
 
 # Berechne Überlap zwischen Gitter und Distanzen
 for index_g, gitter in gitter_df.iterrows():
@@ -153,18 +157,21 @@ for index_g, gitter in gitter_df.iterrows():
         #print(index_u,umkreis["geometry"])
         #print(index_g,gitter)
         overlap = umkreis["geometry"].intersects(gitter["geometry"])
-        print(umkreis["range_value"],umkreis["name"],overlap)
+        print(umkreis["name"], umkreis["range_value"], overlap)
         #print(umkreis["geometry"],gitter["geometry"])
         
         # falls keine Distanz reicht setze festen Wert
-        if (umkreis["range_value"]==dauer_sekunden[-1]) and (overlap == False):
+        if (overlap == False)  and  (umkreis["range_value"]==dauer_sekunden[-1]) :
             gitter_df.loc[index_g,"Overlap_Distance"] = AUSSER_REICHWEITE*Prio_Wertungen[umkreis["name"]] + gitter_df["Overlap_Distance"].loc[index_g]
+            gitter_df.loc[index_g,umkreis["name"]] = AUSSER_REICHWEITE
+
             #print("--Außer Bereich--",umkreis["range_value"],umkreis["name"],AUSSER_REICHWEITE*Prio_Wertungen[umkreis["name"]],gitter_df["Overlap_Distance"].loc[index_g])
             zwischenspeicher = umkreis["name"]
             
         if overlap and umkreis["name"] != zwischenspeicher:
-            #gitter_df["Overlap_Distance"].loc[index_g] = umkreis["range_value"]/60.*Prio_Wertungen[umkreis["name"]] + gitter_df["Overlap_Distance"].loc[index_g]
             gitter_df.loc[index_g,"Overlap_Distance"] = umkreis["range_value"]/60.*Prio_Wertungen[umkreis["name"]] + gitter_df["Overlap_Distance"].loc[index_g]
+            gitter_df.loc[index_g,umkreis["name"]] = umkreis["range_value"]/60.
+
 
             #print("--",umkreis["range_value"],umkreis["name"],umkreis["range_value"]/60.*Prio_Wertungen[umkreis["name"]],gitter_df["Overlap_Distance"].loc[index_g])
             zwischenspeicher = umkreis["name"]
@@ -175,8 +182,13 @@ colormap = cm.LinearColormap(["green", "yellow", "red"], vmin=gitter_df.Overlap_
 
 
 gitter_dict = gitter_df.set_index("id_str")["Overlap_Distance"]
-gitter_df["Labels"] = gitter_df["name"].apply(str) +": " + gitter_df["Overlap_Distance"].apply(str)+ " min"
-popup = folium.GeoJsonPopup(fields=["Labels"])
+
+gitter_df["Gesamtdauer"] = gitter_df["Overlap_Distance"].apply(str)+ " min"
+popup = folium.GeoJsonPopup(
+    fields=["name","Gesamtdauer"]+list(Ziel_Adressen.keys()),
+    localize=True,
+    labels=True,
+    )
 
 folium.GeoJson(gitter_df,
                name="Gitter",
