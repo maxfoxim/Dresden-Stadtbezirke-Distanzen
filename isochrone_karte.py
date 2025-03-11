@@ -22,12 +22,12 @@ Fortbewegungsmittel = 'driving-car'  #'foot-walking',  'driving-car' 'cycling-re
 # Gewünschte Zieladressen
 Ziel_Adressen={
     "Robotron":[51.010042433360255, 13.701267488585485],
-    "Schule":[50.99507147504863, 13.80808908738222],
-    "Kletterarena":[51.040951530745545, 13.715802737639914],
-    "Großeltern":[51.05654509189485, 13.895285953791621],
-    "Dresden Zentrum":[51.05054037636587, 13.736688817986499],
-    "Johanna": [51.04399714777088, 13.812859847360748],
-    "Kita":[51.058520,13.788871]
+    #"Schule":[50.99507147504863, 13.80808908738222],
+    #"Kletterarena":[51.040951530745545, 13.715802737639914],
+    #"Großeltern":[51.05654509189485, 13.895285953791621],
+    #"Dresden Zentrum":[51.05054037636587, 13.736688817986499],
+    #"Johanna": [51.04399714777088, 13.812859847360748],
+    #"Kita":[51.058520,13.788871]
 }
 
 Prio_Wertungen={
@@ -138,28 +138,48 @@ for coordi in Ziel_Adressen:
     i=i+1
 
 
-
+# Interessante Punkte
+opnv_punkte = geopandas.read_file("OPNV.geojson")
+supermarkt_punkte = geopandas.read_file("supermarkt.geojson")
 
 #Polygone in Geopandas überführen um Schnittmengen berechnen zu können
 gitter=erstelle_gitter()
 polygon_df = geopandas.GeoDataFrame(data=geo_dict, crs='epsg:4326',index=geo_dict["name"])#, geometry=[polygon_geom])       
 gitter_df =  geopandas.GeoDataFrame(data=gitter,   crs='epsg:4326',index=  gitter["name"])#, geometry=[polygon_geom])       
 gitter_df["Overlap_Distance"] = 0
+gitter_df["Anzahl_OPNV_Punkte"] = 0
+gitter_df["Anzahl_Supermarkt"] = 0
+
+
 for Interessenspunkt in Ziel_Adressen:
     gitter_df[Interessenspunkt] = 0
 zwischenspeicher = ""
 AUSSER_REICHWEITE = 4200/60. # angenomme Dauer falls angegebener Isochronendauer außerhalb liegt. Globales Maximum
 
-# Berechne Überlap zwischen Gitter und Distanzen
+print(opnv_punkte)
+
+# Berechne Überlap zwischen Gitter und Distanzen/besonderen Punkten
 for index_g, gitter in gitter_df.iterrows():
     print("--------------------- ",index_g,"------------------")
+    
+    overlap_opnv = gitter["geometry"].contains(opnv_punkte["geometry"])
+    stationen_count = overlap_opnv.sum()
+    gitter_df.loc[index_g,"Anzahl_OPNV_Punkte"] = stationen_count
+    print("Anzahl Haltestellen",stationen_count)
+   
+    overlap_supermarkt = gitter["geometry"].contains(supermarkt_punkte["geometry"])
+    supermarkt_count = overlap_supermarkt.sum()
+    gitter_df.loc[index_g,"Anzahl_Supermarkt"] = supermarkt_count
+    print("Anzahl Supermärkte",supermarkt_count) 
+    
     for index_u, umkreis in polygon_df.iterrows():
         #print(index_u,umkreis["geometry"])
         #print(index_g,gitter)
         overlap = umkreis["geometry"].intersects(gitter["geometry"])
-        print(umkreis["name"], umkreis["range_value"], overlap)
-        #print(umkreis["geometry"],gitter["geometry"])
         
+        #print(umkreis["geometry"],gitter["geometry"])
+        print(umkreis["name"], umkreis["range_value"], overlap)
+
         # falls keine Distanz reicht setze festen Wert
         if (overlap == False)  and  (umkreis["range_value"]==dauer_sekunden[-1]) :
             gitter_df.loc[index_g,"Overlap_Distance"] = AUSSER_REICHWEITE*Prio_Wertungen[umkreis["name"]] + gitter_df["Overlap_Distance"].loc[index_g]
@@ -185,7 +205,7 @@ gitter_dict = gitter_df.set_index("id_str")["Overlap_Distance"]
 
 gitter_df["Gesamtdauer"] = gitter_df["Overlap_Distance"].apply(str)+ " min"
 popup = folium.GeoJsonPopup(
-    fields=["name","Gesamtdauer"]+list(Ziel_Adressen.keys()),
+    fields=["name","Gesamtdauer","Anzahl_OPNV_Punkte","Anzahl_Supermarkt"]+list(Ziel_Adressen.keys()),
     localize=True,
     labels=True,
     )
@@ -215,10 +235,10 @@ for count in polygon_df["count"].loc[polygon_df["range_value"] == dauer_sekunden
     ausgabe=ausgabe.intersection(polygon_df["geometry"].loc[(polygon_df["count"] == count)],align=False)
     print(ausgabe)
 
-style_function = lambda x: {'fillColor': 'red',
-                            'color':'red'}
-folium.GeoJson(ausgabe,style_function=style_function,name="Overlap").add_to(m)
-folium.LayerControl().add_to(m)
+#Overlap der weitesten Isochronen
+#style_function = lambda x: {'fillColor': 'red',                          'color':'red'}
+#folium.GeoJson(ausgabe,style_function=style_function,name="Overlap",show=False).add_to(m)
+#folium.LayerControl(show=False).add_to(m)
 
 # Speichern
 file_name = 'Dresden-'
