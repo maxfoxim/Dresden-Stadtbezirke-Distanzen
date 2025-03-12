@@ -144,14 +144,18 @@ kindergarten_punkte = geopandas.read_file("kindergarten.geojson")
 restaurants_punkte = geopandas.read_file("restaurant.geojson")
 
 #Polygone in Geopandas überführen um Schnittmengen berechnen zu können
-gitter=erstelle_gitter()
+gitter = erstelle_gitter()
+gitter_lebensqualität = erstelle_gitter()
 polygon_df = geopandas.GeoDataFrame(data=geo_dict, crs='epsg:4326',index=geo_dict["name"])#, geometry=[polygon_geom])       
-gitter_df =  geopandas.GeoDataFrame(data=gitter,   crs='epsg:4326',index=  gitter["name"])#, geometry=[polygon_geom])       
+gitter_df =  geopandas.GeoDataFrame(data=gitter,   crs='epsg:4326',index=  gitter["name"])#, geometry=[polygon_geom])  
+gitter_lebensqualität_df =  geopandas.GeoDataFrame(data=gitter_lebensqualität, crs='epsg:4326', index=gitter_lebensqualität["name"])#, geometry=[polygon_geom])       
+     
 gitter_df["Overlap_Distance"] = 0
 gitter_df["Anzahl_OPNV_Punkte"] = 0
 gitter_df["Anzahl_Supermarkt"] = 0
 gitter_df["Anzahl_Kindergarten"] = 0
 gitter_df["Anzahl_Restaurants"] = 0
+gitter_lebensqualität_df["Lebensqualität"] = 1
 
 for Interessenspunkt in Ziel_Adressen:
     gitter_df[Interessenspunkt] = 0
@@ -164,26 +168,32 @@ print(opnv_punkte)
 for index_g, gitter in gitter_df.iterrows():
     print("--------------------- ",index_g,"------------------")
     
+    ### Einzelpunkte ###
     overlap_opnv = gitter["geometry"].contains(opnv_punkte["geometry"])
     stationen_count = overlap_opnv.sum()
-    gitter_df.loc[index_g,"Anzahl_OPNV_Punkte"] = stationen_count
+    gitter_lebensqualität_df.loc[index_g,"Anzahl_OPNV_Punkte"] = stationen_count
     print("Anzahl Haltestellen",stationen_count)
    
     overlap_supermarkt = gitter["geometry"].contains(supermarkt_punkte["geometry"])
     supermarkt_count = overlap_supermarkt.sum()
-    gitter_df.loc[index_g,"Anzahl_Supermarkt"] = supermarkt_count
+    gitter_lebensqualität_df.loc[index_g,"Anzahl_Supermarkt"] = supermarkt_count
     print("Anzahl Supermärkte",supermarkt_count) 
     
     overlap_kindergarten = gitter["geometry"].contains(kindergarten_punkte["geometry"])
     kindergarten_count = overlap_kindergarten.sum()
-    gitter_df.loc[index_g,"Anzahl_Kindergarten"] = kindergarten_count
+    gitter_lebensqualität_df.loc[index_g,"Anzahl_Kindergarten"] = kindergarten_count
     print("Anzahl Kitas",kindergarten_count)
    
     overlap_restaurants = gitter["geometry"].contains(supermarkt_punkte["geometry"])
     restaurant_count = overlap_restaurants.sum()
-    gitter_df.loc[index_g,"Anzahl_Restaurants"] = restaurant_count
+    gitter_lebensqualität_df.loc[index_g,"Anzahl_Restaurants"] = restaurant_count
     print("Anzahl Restaurants",restaurant_count) 
     
+    Lebensqualität = stationen_count + supermarkt_count + kindergarten_count + restaurant_count
+    gitter_lebensqualität_df.loc[index_g,"Lebensqualität"] = Lebensqualität
+    print("Lebensqualität", Lebensqualität)
+    
+    ###
     for index_u, umkreis in polygon_df.iterrows():
         #print(index_u,umkreis["geometry"])
         #print(index_g,gitter)
@@ -210,14 +220,23 @@ for index_g, gitter in gitter_df.iterrows():
         
 # Farben für Gitter
 colormap = cm.LinearColormap(["green", "yellow", "red"], vmin=gitter_df.Overlap_Distance.min(), vmax=gitter_df.Overlap_Distance.max(),)
+colormap_lebensqualität = cm.LinearColormap(["red", "yellow", "green"], vmin=0, vmax=gitter_lebensqualität_df.Lebensqualität.max(),)
+
 #colormap = linear.YlGn_09.scale(gitter_df.Overlap_Distance.min(), gitter_df.Overlap_Distance.max())
 
-
 gitter_dict = gitter_df.set_index("id_str")["Overlap_Distance"]
+gitter_lebensqualität_dict = gitter_lebensqualität_df.set_index("id_str")["Lebensqualität"]
+
 
 gitter_df["Gesamtdauer"] = gitter_df["Overlap_Distance"].apply(str)+ " min"
 popup = folium.GeoJsonPopup(
-    fields=["name","Gesamtdauer","Anzahl_OPNV_Punkte","Anzahl_Supermarkt","Anzahl_Kindergarten","Anzahl_Restaurants"]+list(Ziel_Adressen.keys()),
+    fields=["name","Gesamtdauer"]+list(Ziel_Adressen.keys()),
+    localize=True,
+    labels=True,
+    )
+
+popup_lebensqualität = folium.GeoJsonPopup(
+    fields=["name", "Lebensqualität","Anzahl_OPNV_Punkte","Anzahl_Supermarkt","Anzahl_Kindergarten","Anzahl_Restaurants"],
     localize=True,
     labels=True,
     )
@@ -231,12 +250,27 @@ folium.GeoJson(gitter_df,
                     "weight": 1,
                     "dashArray": "5, 5",
                     "fillOpacity": 0.5
-                }
-               ).add_to(m)
+                }).add_to(m)
+
+
+folium.GeoJson(gitter_lebensqualität_df,
+               name="Gitter Lebensqualität",
+               popup=popup_lebensqualität,
+               style_function=lambda feature: {
+                    "fillColor": colormap_lebensqualität(gitter_lebensqualität_dict[feature["id"]]),
+                    "color": "black",
+                    "weight": 1,
+                    "dashArray": "5, 5",
+                    "fillOpacity": 0.5
+                }).add_to(m)
+
+
 
 colormap.caption = "Dauer"
 colormap.add_to(m)
 
+colormap_lebensqualität.caption = "Anzahl Punkte"
+colormap_lebensqualität.add_to(m)
 #print("DF: ",polygon_df)
 #print("Gitter: ",gitter_df)
 #gitter_df.to_csv("gitter.csv")
@@ -251,6 +285,10 @@ for count in polygon_df["count"].loc[polygon_df["range_value"] == dauer_sekunden
 #style_function = lambda x: {'fillColor': 'red',                          'color':'red'}
 #folium.GeoJson(ausgabe,style_function=style_function,name="Overlap",show=False).add_to(m)
 folium.LayerControl(show=False).add_to(m)
+
+print(gitter_df)
+
+print(gitter_lebensqualität_df)
 
 # Speichern
 file_name = 'Dresden-'
