@@ -11,7 +11,6 @@ import branca.colormap as cm
 """ 
 Ideen:
 Aufteilung nach Fahrrad, Auto
-Anzahl relevanter Punkte: Einkaufsmarkt, Haltestellen, 
 Dauer pro Gitterkachel
 Abbuch wenn kleine Isochrone schon drin sind, größere berechnen dann überflüssig
 """
@@ -22,19 +21,19 @@ Fortbewegungsmittel = 'driving-car'  #'foot-walking',  'driving-car' 'cycling-re
 # Gewünschte Zieladressen
 Ziel_Adressen={
     "Robotron":[51.010042433360255, 13.701267488585485],
-    #"Schule":[50.99507147504863, 13.80808908738222],
-    #"Kletterarena":[51.040951530745545, 13.715802737639914],
-    #"Großeltern":[51.05654509189485, 13.895285953791621],
-    #"Dresden Zentrum":[51.05054037636587, 13.736688817986499],
-    #"Johanna": [51.04399714777088, 13.812859847360748],
-    #"Kita":[51.058520,13.788871]
+    "Schule":[50.99507147504863, 13.80808908738222],
+    "Kletterarena":[51.040951530745545, 13.715802737639914],
+    "Großeltern":[51.05654509189485, 13.895285953791621],
+    "Dresden Zentrum":[51.05054037636587, 13.736688817986499],
+    "Johanna": [51.04399714777088, 13.812859847360748],
+    "Kita":[51.058520,13.788871]
 }
 
 Prio_Wertungen={
     "Robotron":2,
     "Schule":5,
     "Kletterarena":1,
-    "Großeltern":2,
+    "Großeltern":1,
     "Dresden Zentrum":1,
     "Johanna": 1,
     "Kita":5
@@ -141,6 +140,8 @@ for coordi in Ziel_Adressen:
 # Interessante Punkte
 opnv_punkte = geopandas.read_file("OPNV.geojson")
 supermarkt_punkte = geopandas.read_file("supermarkt.geojson")
+kindergarten_punkte = geopandas.read_file("kindergarten.geojson")
+restaurants_punkte = geopandas.read_file("restaurant.geojson")
 
 #Polygone in Geopandas überführen um Schnittmengen berechnen zu können
 gitter=erstelle_gitter()
@@ -149,7 +150,8 @@ gitter_df =  geopandas.GeoDataFrame(data=gitter,   crs='epsg:4326',index=  gitte
 gitter_df["Overlap_Distance"] = 0
 gitter_df["Anzahl_OPNV_Punkte"] = 0
 gitter_df["Anzahl_Supermarkt"] = 0
-
+gitter_df["Anzahl_Kindergarten"] = 0
+gitter_df["Anzahl_Restaurants"] = 0
 
 for Interessenspunkt in Ziel_Adressen:
     gitter_df[Interessenspunkt] = 0
@@ -171,6 +173,16 @@ for index_g, gitter in gitter_df.iterrows():
     supermarkt_count = overlap_supermarkt.sum()
     gitter_df.loc[index_g,"Anzahl_Supermarkt"] = supermarkt_count
     print("Anzahl Supermärkte",supermarkt_count) 
+    
+    overlap_kindergarten = gitter["geometry"].contains(kindergarten_punkte["geometry"])
+    kindergarten_count = overlap_kindergarten.sum()
+    gitter_df.loc[index_g,"Anzahl_Kindergarten"] = kindergarten_count
+    print("Anzahl Kitas",kindergarten_count)
+   
+    overlap_restaurants = gitter["geometry"].contains(supermarkt_punkte["geometry"])
+    restaurant_count = overlap_restaurants.sum()
+    gitter_df.loc[index_g,"Anzahl_Restaurants"] = restaurant_count
+    print("Anzahl Restaurants",restaurant_count) 
     
     for index_u, umkreis in polygon_df.iterrows():
         #print(index_u,umkreis["geometry"])
@@ -205,7 +217,7 @@ gitter_dict = gitter_df.set_index("id_str")["Overlap_Distance"]
 
 gitter_df["Gesamtdauer"] = gitter_df["Overlap_Distance"].apply(str)+ " min"
 popup = folium.GeoJsonPopup(
-    fields=["name","Gesamtdauer","Anzahl_OPNV_Punkte","Anzahl_Supermarkt"]+list(Ziel_Adressen.keys()),
+    fields=["name","Gesamtdauer","Anzahl_OPNV_Punkte","Anzahl_Supermarkt","Anzahl_Kindergarten","Anzahl_Restaurants"]+list(Ziel_Adressen.keys()),
     localize=True,
     labels=True,
     )
@@ -238,7 +250,7 @@ for count in polygon_df["count"].loc[polygon_df["range_value"] == dauer_sekunden
 #Overlap der weitesten Isochronen
 #style_function = lambda x: {'fillColor': 'red',                          'color':'red'}
 #folium.GeoJson(ausgabe,style_function=style_function,name="Overlap",show=False).add_to(m)
-#folium.LayerControl(show=False).add_to(m)
+folium.LayerControl(show=False).add_to(m)
 
 # Speichern
 file_name = 'Dresden-'
