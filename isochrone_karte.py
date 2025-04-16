@@ -22,11 +22,11 @@ Fortbewegungsmittel = 'driving-car'  #'foot-walking',  'driving-car' 'cycling-re
 Ziel_Adressen={
     "Robotron":[51.010042433360255, 13.701267488585485],
     "Schule":[50.99507147504863, 13.80808908738222],
-    "Kletterarena":[51.040951530745545, 13.715802737639914],
-    "Großeltern":[51.05654509189485, 13.895285953791621],
-    "Dresden Zentrum":[51.05054037636587, 13.736688817986499],
-    "Johanna": [51.04399714777088, 13.812859847360748],
-    "Kita":[51.058520,13.788871]
+   # "Kletterarena":[51.040951530745545, 13.715802737639914],
+   # "Großeltern":[51.05654509189485, 13.895285953791621],
+   # "Dresden Zentrum":[51.05054037636587, 13.736688817986499],
+   # "Johanna": [51.04399714777088, 13.812859847360748],
+   # "Kita":[51.058520,13.788871]
 }
 
 Prio_Wertungen={
@@ -85,10 +85,9 @@ geo_arrays = []
 i=0
 counter=0
 
-
+# Berechne für alle angegebenen Ziele die Isochronen
 for coordi in Ziel_Adressen:
     print(i,coordi)
-    
     # Berechnung der Isochrone
     iso = client.isochrones(
     locations=[Ziel_Adressen[coordi][::-1]], # Koordinaten umdrehen
@@ -100,7 +99,8 @@ for coordi in Ziel_Adressen:
     # Gruppe der Isochrone
     fg = folium.FeatureGroup(name=coordi, control=True, overlay=True, show=False).add_to(m)
 
-    for isochrone in iso['features'][::]:
+    # Für jede Distanz der Isochronen
+    for isochrone in iso['features'][::]: # Sortiere von klein nach groß
         #print(isochrone)
         locations=[list(reversed(coord)) for coord in isochrone['geometry']['coordinates'][0]]
         #print("locations",locations)
@@ -115,7 +115,7 @@ for coordi in Ziel_Adressen:
         print("Isochrone Zeit:", isochrone["properties"]["value"]/60)
         
         
-    for isochrone in iso['features'][::-1]:
+    for isochrone in iso['features'][::-1]: # sortiere von groß nach klein (besser für Überlappung)
         locations=[list(reversed(coord)) for coord in isochrone['geometry']['coordinates'][0]]
 
         # Isochrones Polygon
@@ -138,10 +138,13 @@ for coordi in Ziel_Adressen:
 
 
 # Interessante Punkte
-opnv_punkte = geopandas.read_file("OPNV.geojson")
-supermarkt_punkte = geopandas.read_file("supermarkt.geojson")
-kindergarten_punkte = geopandas.read_file("kindergarten.geojson")
-restaurants_punkte = geopandas.read_file("restaurant.geojson")
+opnv_punkte = geopandas.read_file("GeoJsons/OPNV.geojson")
+supermarkt_punkte = geopandas.read_file("GeoJsons/supermarkt.geojson")
+kindergarten_punkte = geopandas.read_file("GeoJsons/kindergarten.geojson")
+restaurants_punkte = geopandas.read_file("GeoJsons/restaurant.geojson")
+
+# Stadtgebiete
+stadtgebiete = geopandas.read_file("GeoJsons/dresdener_gebiete_grenzen.geojson")
 
 #Polygone in Geopandas überführen um Schnittmengen berechnen zu können
 gitter = erstelle_gitter()
@@ -241,6 +244,12 @@ popup_lebensqualität = folium.GeoJsonPopup(
     labels=True,
     )
 
+popup_stadtbezirke = folium.GeoJsonPopup(
+    fields=["name","official_name"],
+    localize=True,
+    labels=True,
+    )
+
 folium.GeoJson(gitter_df,
                name="Gitter",
                popup=popup,
@@ -265,12 +274,23 @@ folium.GeoJson(gitter_lebensqualität_df,
                 }).add_to(m)
 
 
-
 colormap.caption = "Dauer"
 colormap.add_to(m)
-
 colormap_lebensqualität.caption = "Anzahl Punkte"
 colormap_lebensqualität.add_to(m)
+
+
+folium.GeoJson(stadtgebiete,
+               name="Stadtgebiete",
+               popup=popup_stadtbezirke,
+               style_function=lambda feature: {
+                    "fillColor": "blue",
+                    "color": "black",
+                    "weight": 2,
+                    "dashArray": "5, 5",
+                    "fillOpacity": 0.3
+                }).add_to(m)
+
 #print("DF: ",polygon_df)
 #print("Gitter: ",gitter_df)
 #gitter_df.to_csv("gitter.csv")
