@@ -13,6 +13,7 @@ Ideen:
 Aufteilung nach Fahrrad, Auto
 Dauer pro Gitterkachel
 Abbuch wenn kleine Isochrone schon drin sind, größere berechnen dann überflüssig
+Gebiete statt Kacheln
 """
 
 dauer_sekunden=[5*60,10*60,20*60,30*60]
@@ -70,7 +71,11 @@ def erstelle_gitter(Anzahl_Punkte=30):
         i=i+1
     
     range_len = [str(i) for i in range(len(rechtecke))]
-    return { "name":range(len(rechtecke)), "geometry":rechtecke, "id_str":range_len}
+    return { 
+            "name":range(len(rechtecke)), 
+            "geometry":rechtecke, 
+            "id_str":range_len
+            }
 
 # Erstelle Verbindung zu ORS (Berechnung der Isochrone)
 client = ors.Client(key=secret_api.api)
@@ -145,14 +150,30 @@ restaurants_punkte = geopandas.read_file("GeoJsons/restaurant.geojson")
 
 # Stadtgebiete
 stadtgebiete = geopandas.read_file("GeoJsons/dresdener_gebiete_grenzen.geojson")
+stadtgebiete = stadtgebiete[stadtgebiete["name"].notnull()]
+stadtgebiete_json = {
+    "name":stadtgebiete["name"].to_list(),
+    #"name":stadtgebiete.index.to_list(),
+    "geometry":stadtgebiete["geometry"].to_list(),
+    #"id_str": [str(i) for i in range(len(stadtgebiete))],
+    "id_str": stadtgebiete["name"].to_list()
 
+}
+print("stadtgebiete_json",stadtgebiete_json)
+print("---------")
 #Polygone in Geopandas überführen um Schnittmengen berechnen zu können
 gitter = erstelle_gitter()
 gitter_lebensqualität = erstelle_gitter()
 polygon_df = geopandas.GeoDataFrame(data=geo_dict, crs='epsg:4326',index=geo_dict["name"])#, geometry=[polygon_geom])       
 gitter_df =  geopandas.GeoDataFrame(data=gitter,   crs='epsg:4326',index=  gitter["name"])#, geometry=[polygon_geom])  
-gitter_lebensqualität_df =  geopandas.GeoDataFrame(data=gitter_lebensqualität, crs='epsg:4326', index=gitter_lebensqualität["name"])#, geometry=[polygon_geom])       
-     
+gitter_lebensqualität_df_alt =  geopandas.GeoDataFrame(data=gitter_lebensqualität, crs='epsg:4326', index=gitter_lebensqualität["name"])#, geometry=[polygon_geom])       
+
+gitter_df =  geopandas.GeoDataFrame(data=stadtgebiete_json,   crs='epsg:4326',index=  stadtgebiete_json["name"])#, geometry=[polygon_geom])  
+gitter_lebensqualität_df=  geopandas.GeoDataFrame(data=stadtgebiete_json,   crs='epsg:4326',index = stadtgebiete_json["name"])#, geometry=[polygon_geom])  
+#gitter_lebensqualität_df["id_str"] = gitter_lebensqualität_df["name"]
+
+print(gitter_lebensqualität_df)
+print(gitter_lebensqualität_df_alt)
 gitter_df["Overlap_Distance"] = 0
 gitter_df["Anzahl_OPNV_Punkte"] = 0
 gitter_df["Anzahl_Supermarkt"] = 0
