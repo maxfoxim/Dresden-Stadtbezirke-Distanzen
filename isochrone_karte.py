@@ -13,12 +13,15 @@ Ideen:
 Aufteilung nach Fahrrad, Auto
 Dauer pro Gitterkachel
 Abbuch wenn kleine Isochrone schon drin sind, größere berechnen dann überflüssig
-Gebiete statt Kacheln
+Gebiete statt Kacheln -> 
+    Überschneidung Mittelwert Zeiten (Prozent Überlapp)
 """
 
 dauer_sekunden=[5*60,10*60,20*60,30*60]
 Fortbewegungsmittel = 'driving-car'  #'foot-walking',  'driving-car' 'cycling-regular'
 Use_Gitter = False # Benutze Gitter oder die echten Stadtgrenzen
+AUSSER_REICHWEITE = 4200/60. # angenomme Dauer falls angegebener Isochronendauer außerhalb liegt. Globales Maximum
+
 
 # Gewünschte Zieladressen
 Ziel_Adressen={
@@ -168,10 +171,10 @@ gitter_lebensqualität = erstelle_gitter()
 polygon_df = geopandas.GeoDataFrame(data=geo_dict, crs='epsg:4326',index=geo_dict["name"])#, geometry=[polygon_geom])  
 
 if Use_Gitter:     
-    gitter_df =  geopandas.GeoDataFrame(data=gitter,   crs='epsg:4326',index=  gitter["name"])#, geometry=[polygon_geom])  
+    gitter_df =                geopandas.GeoDataFrame(data=gitter,   crs='epsg:4326',index=  gitter["name"])#, geometry=[polygon_geom])  
     gitter_lebensqualität_df=  geopandas.GeoDataFrame(data=gitter,   crs='epsg:4326',index = gitter["name"])#, geometry=[polygon_geom])  
 else:
-    gitter_df =  geopandas.GeoDataFrame(data=stadtgebiete_json,   crs='epsg:4326',index=  stadtgebiete_json["name"])#, geometry=[polygon_geom])  
+    gitter_df =                geopandas.GeoDataFrame(data=stadtgebiete_json,   crs='epsg:4326',index=  stadtgebiete_json["name"])#, geometry=[polygon_geom])  
     gitter_lebensqualität_df=  geopandas.GeoDataFrame(data=stadtgebiete_json,   crs='epsg:4326',index = stadtgebiete_json["name"])#, geometry=[polygon_geom])  
 
 gitter_df["Overlap_Distance"] = 0
@@ -184,63 +187,69 @@ gitter_lebensqualität_df["Lebensqualität"] = 1
 for Interessenspunkt in Ziel_Adressen:
     gitter_df[Interessenspunkt] = 0
 zwischenspeicher = ""
-AUSSER_REICHWEITE = 4200/60. # angenomme Dauer falls angegebener Isochronendauer außerhalb liegt. Globales Maximum
 
-print(opnv_punkte)
+#print(opnv_punkte)
 
 # Berechne Überlap zwischen Gitter und Distanzen/besonderen Punkten
-for index_g, gitter in gitter_df.iterrows():
+for index_g, einzelgebiet in gitter_df.iterrows():
     print("--------------------- ",index_g,"------------------")
     
     ### Einzelpunkte ###
-    overlap_opnv = gitter["geometry"].contains(opnv_punkte["geometry"])
-    stationen_count = overlap_opnv.sum()
-    gitter_lebensqualität_df.loc[index_g,"Anzahl_OPNV_Punkte"] = stationen_count
+    overlap_opnv = einzelgebiet["geometry"].contains(opnv_punkte["geometry"]) #  Interessenpunkte in Einzelgebiet
+    stationen_count = overlap_opnv.sum() # Anzahl der Interessenpunkte in Gebiet
+    gitter_lebensqualität_df.loc[index_g,"Anzahl_OPNV_Punkte"] = stationen_count # festschreiben in DF
     print("Anzahl Haltestellen",stationen_count)
    
-    overlap_supermarkt = gitter["geometry"].contains(supermarkt_punkte["geometry"])
+    overlap_supermarkt = einzelgebiet["geometry"].contains(supermarkt_punkte["geometry"])
     supermarkt_count = overlap_supermarkt.sum()
     gitter_lebensqualität_df.loc[index_g,"Anzahl_Supermarkt"] = supermarkt_count
     print("Anzahl Supermärkte",supermarkt_count) 
     
-    overlap_kindergarten = gitter["geometry"].contains(kindergarten_punkte["geometry"])
+    overlap_kindergarten = einzelgebiet["geometry"].contains(kindergarten_punkte["geometry"])
     kindergarten_count = overlap_kindergarten.sum()
     gitter_lebensqualität_df.loc[index_g,"Anzahl_Kindergarten"] = kindergarten_count
     print("Anzahl Kitas",kindergarten_count)
    
-    overlap_restaurants = gitter["geometry"].contains(supermarkt_punkte["geometry"])
+    overlap_restaurants = einzelgebiet["geometry"].contains(supermarkt_punkte["geometry"])
     restaurant_count = overlap_restaurants.sum()
     gitter_lebensqualität_df.loc[index_g,"Anzahl_Restaurants"] = restaurant_count
     print("Anzahl Restaurants",restaurant_count) 
     
-    Lebensqualität = stationen_count + supermarkt_count + kindergarten_count + restaurant_count
+    #Gesamtqualität
+    Lebensqualität = stationen_count + supermarkt_count + kindergarten_count + restaurant_count 
     gitter_lebensqualität_df.loc[index_g,"Lebensqualität"] = Lebensqualität
     print("Lebensqualität", Lebensqualität)
     
-    ###
-    for index_u, umkreis in polygon_df.iterrows():
-        #print(index_u,umkreis["geometry"])
+    # Überschneidung zwischen Einzelgebieten und Isochronen berechnen
+    for index_u, einzel_isochrone in polygon_df.iterrows():
+        #print(index_u,einzel_isochrone["geometry"])
         #print(index_g,gitter)
-        overlap = umkreis["geometry"].intersects(gitter["geometry"])
         
-        #print(umkreis["geometry"],gitter["geometry"])
-        print(umkreis["name"], umkreis["range_value"], overlap)
+        overlap = einzel_isochrone["geometry"].intersects(einzelgebiet["geometry"]) # Gibt es Schnittmenge?
+        
+        overlap_area = einzel_isochrone["geometry"].intersection(einzelgebiet["geometry"])
+        gebiet_size = einzelgebiet["geometry"].area
+        overlap_area_size = overlap_area.area
+        
+        
+        #print(einzel_isochrone["geometry"],einzelgebiet["geometry"])
+        print(einzel_isochrone["name"], einzel_isochrone["range_value"], overlap,round(overlap_area_size/gebiet_size,4))
 
         # falls keine Distanz reicht setze festen Wert
-        if (overlap == False)  and  (umkreis["range_value"]==dauer_sekunden[-1]) :
-            gitter_df.loc[index_g,"Overlap_Distance"] = AUSSER_REICHWEITE*Prio_Wertungen[umkreis["name"]] + gitter_df["Overlap_Distance"].loc[index_g]
-            gitter_df.loc[index_g,umkreis["name"]] = AUSSER_REICHWEITE
+        if (overlap == False)  and  (einzel_isochrone["range_value"]==dauer_sekunden[-1]) :
+            gitter_df.loc[index_g,"Overlap_Distance"] = AUSSER_REICHWEITE*Prio_Wertungen[einzel_isochrone["name"]] + gitter_df["Overlap_Distance"].loc[index_g]
+            gitter_df.loc[index_g,einzel_isochrone["name"]] = AUSSER_REICHWEITE
 
-            #print("--Außer Bereich--",umkreis["range_value"],umkreis["name"],AUSSER_REICHWEITE*Prio_Wertungen[umkreis["name"]],gitter_df["Overlap_Distance"].loc[index_g])
-            zwischenspeicher = umkreis["name"]
+            #print("--Außer Bereich--",einzel_isochrone["range_value"],einzel_isochrone["name"],AUSSER_REICHWEITE*Prio_Wertungen[einzel_isochrone["name"]],gitter_df["Overlap_Distance"].loc[index_g])
+            zwischenspeicher = einzel_isochrone["name"]
             
-        if overlap and umkreis["name"] != zwischenspeicher:
-            gitter_df.loc[index_g,"Overlap_Distance"] = umkreis["range_value"]/60.*Prio_Wertungen[umkreis["name"]] + gitter_df["Overlap_Distance"].loc[index_g]
-            gitter_df.loc[index_g,umkreis["name"]] = umkreis["range_value"]/60.
+        if overlap and einzel_isochrone["name"] != zwischenspeicher:
+            gitter_df.loc[index_g,"Overlap_Distance"] = einzel_isochrone["range_value"]/60.*Prio_Wertungen[einzel_isochrone["name"]] + gitter_df["Overlap_Distance"].loc[index_g]
+            gitter_df.loc[index_g,einzel_isochrone["name"]] = einzel_isochrone["range_value"]/60.
 
 
-            #print("--",umkreis["range_value"],umkreis["name"],umkreis["range_value"]/60.*Prio_Wertungen[umkreis["name"]],gitter_df["Overlap_Distance"].loc[index_g])
-            zwischenspeicher = umkreis["name"]
+            #print("--",einzel_isochrone["range_value"],einzel_isochrone["name"],einzel_isochrone["range_value"]/60.*Prio_Wertungen[einzel_isochrone["name"]],gitter_df["Overlap_Distance"].loc[index_g])
+            zwischenspeicher = einzel_isochrone["name"]
         
 # Farben für Gitter
 colormap = cm.LinearColormap(["green", "yellow", "red"], vmin=gitter_df.Overlap_Distance.min(), vmax=gitter_df.Overlap_Distance.max(),)
@@ -317,9 +326,10 @@ folium.GeoJson(stadtgebiete,
 #gitter_df.to_csv("gitter.csv")
 
 # Berechne Überschneidungen aller Isochronen
-ausgabe=polygon_df["geometry"].loc[ (polygon_df["name"] == "Robotron") & (polygon_df["range_value"] == dauer_sekunden[-1])]
+ausgabe = polygon_df["geometry"].loc[(polygon_df["name"] == "Robotron") & (polygon_df["range_value"] == dauer_sekunden[-1])]
 for count in polygon_df["count"].loc[polygon_df["range_value"] == dauer_sekunden[-1]]:
-    ausgabe=ausgabe.intersection(polygon_df["geometry"].loc[(polygon_df["count"] == count)],align=False)
+    ausgabe = ausgabe.intersection(
+        polygon_df["geometry"].loc[(polygon_df["count"] == count)], align=False)
     print(ausgabe)
 
 #Overlap der weitesten Isochronen
