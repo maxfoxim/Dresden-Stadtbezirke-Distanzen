@@ -18,16 +18,17 @@ Gebiete statt Kacheln
 
 dauer_sekunden=[5*60,10*60,20*60,30*60]
 Fortbewegungsmittel = 'driving-car'  #'foot-walking',  'driving-car' 'cycling-regular'
+Use_Gitter = False # Benutze Gitter oder die echten Stadtgrenzen
 
 # Gewünschte Zieladressen
 Ziel_Adressen={
     "Robotron":[51.010042433360255, 13.701267488585485],
     "Schule":[50.99507147504863, 13.80808908738222],
-   # "Kletterarena":[51.040951530745545, 13.715802737639914],
-   # "Großeltern":[51.05654509189485, 13.895285953791621],
-   # "Dresden Zentrum":[51.05054037636587, 13.736688817986499],
-   # "Johanna": [51.04399714777088, 13.812859847360748],
-   # "Kita":[51.058520,13.788871]
+    "Kletterarena":[51.040951530745545, 13.715802737639914],
+     "Großeltern":[51.05654509189485, 13.895285953791621],
+     "Dresden Zentrum":[51.05054037636587, 13.736688817986499],
+     "Johanna": [51.04399714777088, 13.812859847360748],
+     "Kita":[51.058520,13.788871]
 }
 
 Prio_Wertungen={
@@ -164,16 +165,15 @@ print("---------")
 #Polygone in Geopandas überführen um Schnittmengen berechnen zu können
 gitter = erstelle_gitter()
 gitter_lebensqualität = erstelle_gitter()
-polygon_df = geopandas.GeoDataFrame(data=geo_dict, crs='epsg:4326',index=geo_dict["name"])#, geometry=[polygon_geom])       
-gitter_df =  geopandas.GeoDataFrame(data=gitter,   crs='epsg:4326',index=  gitter["name"])#, geometry=[polygon_geom])  
-gitter_lebensqualität_df_alt =  geopandas.GeoDataFrame(data=gitter_lebensqualität, crs='epsg:4326', index=gitter_lebensqualität["name"])#, geometry=[polygon_geom])       
+polygon_df = geopandas.GeoDataFrame(data=geo_dict, crs='epsg:4326',index=geo_dict["name"])#, geometry=[polygon_geom])  
 
-gitter_df =  geopandas.GeoDataFrame(data=stadtgebiete_json,   crs='epsg:4326',index=  stadtgebiete_json["name"])#, geometry=[polygon_geom])  
-gitter_lebensqualität_df=  geopandas.GeoDataFrame(data=stadtgebiete_json,   crs='epsg:4326',index = stadtgebiete_json["name"])#, geometry=[polygon_geom])  
-#gitter_lebensqualität_df["id_str"] = gitter_lebensqualität_df["name"]
+if Use_Gitter:     
+    gitter_df =  geopandas.GeoDataFrame(data=gitter,   crs='epsg:4326',index=  gitter["name"])#, geometry=[polygon_geom])  
+    gitter_lebensqualität_df=  geopandas.GeoDataFrame(data=gitter,   crs='epsg:4326',index = gitter["name"])#, geometry=[polygon_geom])  
+else:
+    gitter_df =  geopandas.GeoDataFrame(data=stadtgebiete_json,   crs='epsg:4326',index=  stadtgebiete_json["name"])#, geometry=[polygon_geom])  
+    gitter_lebensqualität_df=  geopandas.GeoDataFrame(data=stadtgebiete_json,   crs='epsg:4326',index = stadtgebiete_json["name"])#, geometry=[polygon_geom])  
 
-print(gitter_lebensqualität_df)
-print(gitter_lebensqualität_df_alt)
 gitter_df["Overlap_Distance"] = 0
 gitter_df["Anzahl_OPNV_Punkte"] = 0
 gitter_df["Anzahl_Supermarkt"] = 0
