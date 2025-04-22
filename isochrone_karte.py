@@ -162,7 +162,9 @@ kindergarten_punkte = geopandas.read_file("GeoJsons/kindergarten.geojson")
 restaurants_punkte =  geopandas.read_file("GeoJsons/restaurant.geojson")
 
 # Stadtgebiete
-stadtgebiete = geopandas.read_file("GeoJsons/dresdener_gebiete_grenzen.geojson")
+#stadtgebiete = geopandas.read_file("GeoJsons/dresdener_gebiete_grenzen.geojson")
+stadtgebiete = geopandas.read_file("GeoJsons/dresden_plus_vorstadt.geojson")
+
 stadtgebiete = stadtgebiete[stadtgebiete["name"].notnull()]
 stadtgebiete_json = {
     "name":    stadtgebiete["name"].to_list(),
@@ -309,6 +311,9 @@ popup_stadtbezirke = folium.GeoJsonPopup(
     labels=True,
     )
 
+print("DOPPELTE")
+print(isochronen_df[isochronen_df.duplicated(keep=False)])
+
 folium.GeoJson(isochronen_df,
                name="Gitter",
                popup=popup,
@@ -339,6 +344,8 @@ colormap_lebensqualität.caption = "Anzahl Punkte"
 colormap_lebensqualität.add_to(m)
 
 
+
+"""
 folium.GeoJson(stadtgebiete,
                name="Stadtgebiete",
                popup=popup_stadtbezirke,
@@ -349,7 +356,7 @@ folium.GeoJson(stadtgebiete,
                     "dashArray": "5, 5",
                     "fillOpacity": 0.3
                 }).add_to(m)
-
+"""
 #print("DF: ",polygon_df)
 #print("Gitter: ",isochronen_df)
 #isochronen_df.to_csv("gitter.csv")

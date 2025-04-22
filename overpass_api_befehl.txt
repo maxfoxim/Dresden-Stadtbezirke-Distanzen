@@ -19,3 +19,18 @@ out;
 out body;
 >;
 out skel qt;
+
+
+
+[out:json][timeout:25];
+(
+  relation
+    [admin_level=9]
+    [type = boundary]
+    [boundary="administrative" ]({{bbox}});
+    relation
+    [admin_level=8]
+    [type = boundary]
+    [boundary="administrative" ]({{bbox}});
+);
+out geom;
