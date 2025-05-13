@@ -11,10 +11,8 @@ import branca.colormap as cm
 """ 
 Ideen:
 Aufteilung nach Fahrrad, Auto
-Dauer pro Gitterkachel
 Abbuch wenn kleine Isochrone schon drin sind, größere berechnen dann überflüssig
-Gebiete statt Kacheln -> 
-    Überschneidung Mittelwert Zeiten (Prozent Überlapp)
+Busverbindungen einbauen https://www.openstreetmap.org/relation/721888#map=14/51.04417/13.74149
 """
 
 dauer_sekunden=[
@@ -27,7 +25,7 @@ dauer_sekunden=[
     35*60,
     40*60
     ]
-Fortbewegungsmittel = 'cycling-regular'  #'foot-walking',  'driving-car' 'cycling-regular'
+Fortbewegungsmittel = 'driving-car'  #'foot-walking',  'driving-car' 'cycling-regular'
 Use_Gitter = False # Benutze Gitter oder die echten Stadtgrenzen
 AUSSER_REICHWEITE = 45*60/60. # angenomme Dauer falls angegebener Isochronendauer außerhalb liegt. Globales Maximum
 
@@ -35,8 +33,8 @@ AUSSER_REICHWEITE = 45*60/60. # angenomme Dauer falls angegebener Isochronendaue
 # Gewünschte Zieladressen
 Ziel_Adressen={
     "Robotron":[51.010042433360255, 13.701267488585485],
-    "Schule":[50.99507147504863, 13.80808908738222],
-    "Kletterarena":[51.040951530745545, 13.715802737639914],
+     "Schule":[50.99507147504863, 13.80808908738222],
+     "Kletterarena":[51.040951530745545, 13.715802737639914],
      "Großeltern":[51.05654509189485, 13.895285953791621],
      "Dresden Zentrum":[51.05054037636587, 13.736688817986499],
      "Johanna": [51.04399714777088, 13.812859847360748],
@@ -160,6 +158,18 @@ opnv_punkte =         geopandas.read_file("GeoJsons/OPNV.geojson")
 supermarkt_punkte =   geopandas.read_file("GeoJsons/supermarkt.geojson")
 kindergarten_punkte = geopandas.read_file("GeoJsons/kindergarten.geojson")
 restaurants_punkte =  geopandas.read_file("GeoJsons/restaurant.geojson")
+schulen_punkte =      geopandas.read_file("GeoJsons/schulen.geojson")
+
+# passendes Format für Darstellung
+schule_plot =         geopandas.GeoDataFrame(data=schulen_punkte,        crs='epsg:4326', index = schulen_punkte["name"],      geometry=schulen_punkte["geometry"].to_list()) 
+opnv_plot =           geopandas.GeoDataFrame(data=opnv_punkte,           crs='epsg:4326', index = opnv_punkte["name"],         geometry=opnv_punkte["geometry"].to_list()) 
+supermarkt_plot =   geopandas.GeoDataFrame(data=supermarkt_punkte,     crs='epsg:4326', index = supermarkt_punkte["name"],   geometry=supermarkt_punkte["geometry"].to_list()) 
+kindergarten_plot = geopandas.GeoDataFrame(data=kindergarten_punkte,   crs='epsg:4326', index = kindergarten_punkte["name"], geometry=kindergarten_punkte["geometry"].to_list()) 
+
+schule_plot["name"] = schule_plot.index
+opnv_plot["name"] = opnv_plot.index
+supermarkt_plot["name"] = supermarkt_plot.index
+kindergarten_plot["name"] = kindergarten_plot.index
 
 # Stadtgebiete
 #stadtgebiete = geopandas.read_file("GeoJsons/dresdener_gebiete_grenzen.geojson")
@@ -191,6 +201,7 @@ isochronen_df["Anzahl_OPNV_Punkte"] = 0
 isochronen_df["Anzahl_Supermarkt"] = 0
 isochronen_df["Anzahl_Kindergarten"] = 0
 isochronen_df["Anzahl_Restaurants"] = 0
+isochronen_df["Anzahl_Schulen"] = 0
 lebensqualität_df["Lebensqualität"] = 1
 
 for Interessenspunkt in Ziel_Adressen:
@@ -204,6 +215,11 @@ for index_gebiet, einzelgebiet in isochronen_df.iterrows():
     print("--------------------- ",index_gebiet,"------------------")
     
     ### Einzelpunkte ###
+    overlap_schulen = einzelgebiet["geometry"].contains(schulen_punkte["geometry"]) #  Interessenpunkte in Einzelgebiet
+    schulen_count = overlap_schulen.sum() # Anzahl der Interessenpunkte in Gebiet
+    lebensqualität_df.loc[index_gebiet,"Anzahl_Schulen"] = schulen_count # festschreiben in DF
+    print("Anzahl Schulen",schulen_count)
+    
     overlap_opnv = einzelgebiet["geometry"].contains(opnv_punkte["geometry"]) #  Interessenpunkte in Einzelgebiet
     stationen_count = overlap_opnv.sum() # Anzahl der Interessenpunkte in Gebiet
     lebensqualität_df.loc[index_gebiet,"Anzahl_OPNV_Punkte"] = stationen_count # festschreiben in DF
@@ -225,7 +241,7 @@ for index_gebiet, einzelgebiet in isochronen_df.iterrows():
     print("Anzahl Restaurants",restaurant_count) 
     
     #Gesamtqualität
-    Lebensqualität = stationen_count + supermarkt_count + kindergarten_count + restaurant_count 
+    Lebensqualität = stationen_count + supermarkt_count + kindergarten_count + restaurant_count + schulen_count
     lebensqualität_df.loc[index_gebiet,"Lebensqualität"] = Lebensqualität
     print("Lebensqualität", Lebensqualität)
     
@@ -300,7 +316,7 @@ popup = folium.GeoJsonPopup(
     )
 
 popup_lebensqualität = folium.GeoJsonPopup(
-    fields=["name", "Lebensqualität","Anzahl_OPNV_Punkte","Anzahl_Supermarkt","Anzahl_Kindergarten","Anzahl_Restaurants"],
+    fields=["name", "Lebensqualität","Anzahl_OPNV_Punkte","Anzahl_Supermarkt","Anzahl_Kindergarten","Anzahl_Restaurants","Anzahl_Schulen"],
     localize=True,
     labels=True,
     )
@@ -311,22 +327,99 @@ popup_stadtbezirke = folium.GeoJsonPopup(
     labels=True,
     )
 
+popup_interessante_punkte = folium.GeoJsonPopup(
+    fields=["name"],
+    localize=True,
+    labels=True,
+    )
+
+popup_interessante_punkte2 = folium.GeoJsonPopup(
+    fields=["name"],
+    localize=True,
+    labels=True,
+    )
+
+popup_interessante_punkte3 = folium.GeoJsonPopup(
+    fields=["name"],
+    localize=True,
+    labels=True,
+    )
+
+popup_interessante_punkte4 = folium.GeoJsonPopup(
+    fields=["name"],
+    localize=True,
+    labels=True,
+    )
+
 print("DOPPELTE")
 print(isochronen_df[isochronen_df.duplicated(keep=False)])
 
+
+folium.GeoJson(schule_plot,
+               name="Schulen",
+               popup=popup_interessante_punkte,
+               style_function=lambda feature: {
+                    "fillColor": "blue",
+                    "color": "blue",
+                    "weight": 1,
+                    "fillOpacity": 0.9
+                }
+               ).add_to(m)
+
+folium.GeoJson(opnv_plot,
+               name="OPNV",
+               marker=folium.Circle(radius=40, fill_color="green", fill_opacity=0.6, color="black", weight=1),
+               popup=popup_interessante_punkte2,
+               style_function=lambda feature: {
+                    "fillColor": "green",
+                    "color": "green",
+                    "weight": 1,
+                    "fillOpacity": 0.9,
+                    "markerColor":"green"
+                }
+               ).add_to(m)
+
+folium.GeoJson(kindergarten_plot,
+               name="Kindergarten",
+               marker=folium.Circle(radius=40, fill_color="orange", fill_opacity=0.9, color="black", weight=1),
+               popup=popup_interessante_punkte3,
+               style_function=lambda feature: {
+                    "fillColor": "orange",
+                    "color": "orange",
+                    "weight": 1,
+                    "fillOpacity": 0.9,
+                    "markerColor":"orange"
+                }
+               ).add_to(m)
+
+folium.GeoJson(supermarkt_plot,
+               name="Supermarkt",
+               popup=popup_interessante_punkte4,
+               marker=folium.Circle(radius=40, fill_color="red", fill_opacity=0.4, color="black", weight=1),
+               style_function=lambda feature: {
+                    "fillColor": "red",
+                    "color": "red",
+                    "weight": 1,
+                    "fillOpacity": 0.9,
+                    "markerColor":"red"
+                }
+               ).add_to(m)
+
 folium.GeoJson(isochronen_df,
-               name="Gitter",
+               show=False,
+               name="Gitter Entfernungen",
                popup=popup,
                style_function=lambda feature: {
                     "fillColor": colormap(gitter_dict[feature["id"]]),
                     "color": "black",
                     "weight": 1,
                     "dashArray": "5, 5",
-                    "fillOpacity": 0.5
+                    "fillOpacity": 0.9
                 }).add_to(m)
 
 
 folium.GeoJson(lebensqualität_df,
+               show=False,
                name="Gitter Lebensqualität",
                popup=popup_lebensqualität,
                style_function=lambda feature: {
