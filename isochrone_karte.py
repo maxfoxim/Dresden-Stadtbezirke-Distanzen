@@ -17,13 +17,13 @@ Busverbindungen einbauen https://www.openstreetmap.org/relation/721888#map=14/51
 
 dauer_sekunden=[
     5*60,
-    10*60,
-    15*60,
-    20*60,
-    25*60,
-    30*60,
-    35*60,
-    40*60
+    #10*60,
+    #15*60,
+    #20*60,
+    #25*60,
+    #30*60,
+    #35*60,
+    #40*60
     ]
 Fortbewegungsmittel = 'driving-car'  #'foot-walking',  'driving-car' 'cycling-regular'
 Use_Gitter = False # Benutze Gitter oder die echten Stadtgrenzen
@@ -33,12 +33,12 @@ AUSSER_REICHWEITE = 45*60/60. # angenomme Dauer falls angegebener Isochronendaue
 # Gewünschte Zieladressen
 Ziel_Adressen={
     "Robotron":[51.010042433360255, 13.701267488585485],
-     "Schule":[50.99507147504863, 13.80808908738222],
-     "Kletterarena":[51.040951530745545, 13.715802737639914],
-     "Großeltern":[51.05654509189485, 13.895285953791621],
-     "Dresden Zentrum":[51.05054037636587, 13.736688817986499],
-     "Johanna": [51.04399714777088, 13.812859847360748],
-     "Kita":[51.058520,13.788871]
+    # "Schule":[50.99507147504863, 13.80808908738222],
+    # "Kletterarena":[51.040951530745545, 13.715802737639914],
+    # "Großeltern":[51.05654509189485, 13.895285953791621],
+    # "Dresden Zentrum":[51.05054037636587, 13.736688817986499],
+    # "Johanna": [51.04399714777088, 13.812859847360748],
+    # "Kita":[51.058520,13.788871]
 }
 
 Prio_Wertungen={
@@ -154,22 +154,35 @@ for coordi in Ziel_Adressen:
 
 
 # Interessante Punkte
+bus_linien =          geopandas.read_file("GeoJsons/Buslinien.geojson")
+tram_linien =         geopandas.read_file("GeoJsons/straßenbahnlinien.geojson")
 opnv_punkte =         geopandas.read_file("GeoJsons/OPNV.geojson")
 supermarkt_punkte =   geopandas.read_file("GeoJsons/supermarkt.geojson")
 kindergarten_punkte = geopandas.read_file("GeoJsons/kindergarten.geojson")
 restaurants_punkte =  geopandas.read_file("GeoJsons/restaurant.geojson")
 schulen_punkte =      geopandas.read_file("GeoJsons/schulen.geojson")
 
+print(bus_linien["colour"])
 # passendes Format für Darstellung
-schule_plot =         geopandas.GeoDataFrame(data=schulen_punkte,        crs='epsg:4326', index = schulen_punkte["name"],      geometry=schulen_punkte["geometry"].to_list()) 
-opnv_plot =           geopandas.GeoDataFrame(data=opnv_punkte,           crs='epsg:4326', index = opnv_punkte["name"],         geometry=opnv_punkte["geometry"].to_list()) 
+schule_plot =         geopandas.GeoDataFrame(data=schulen_punkte,        crs='epsg:4326', index = schulen_punkte["name"],    geometry=schulen_punkte["geometry"].to_list()) 
+opnv_plot =           geopandas.GeoDataFrame(data=opnv_punkte,           crs='epsg:4326', index = opnv_punkte["name"],       geometry=opnv_punkte["geometry"].to_list()) 
 supermarkt_plot =   geopandas.GeoDataFrame(data=supermarkt_punkte,     crs='epsg:4326', index = supermarkt_punkte["name"],   geometry=supermarkt_punkte["geometry"].to_list()) 
 kindergarten_plot = geopandas.GeoDataFrame(data=kindergarten_punkte,   crs='epsg:4326', index = kindergarten_punkte["name"], geometry=kindergarten_punkte["geometry"].to_list()) 
+tram_linien_plot = geopandas.GeoDataFrame(data=tram_linien,   crs='epsg:4326', index = tram_linien["name"], geometry=tram_linien["geometry"].to_list()) 
+bus_linien_plot = geopandas.GeoDataFrame(data=bus_linien,   crs='epsg:4326', index = bus_linien["name"], geometry=bus_linien["geometry"].to_list()) 
 
+
+
+bus_linien_plot["name"] = bus_linien_plot.index
 schule_plot["name"] = schule_plot.index
 opnv_plot["name"] = opnv_plot.index
 supermarkt_plot["name"] = supermarkt_plot.index
 kindergarten_plot["name"] = kindergarten_plot.index
+tram_linien_plot["name"] = tram_linien_plot.index
+
+bus_linien_plot["colour"] = bus_linien["colour"].to_list()
+tram_linien_plot["colour"] = tram_linien["colour"].to_list()
+
 
 # Stadtgebiete
 #stadtgebiete = geopandas.read_file("GeoJsons/dresdener_gebiete_grenzen.geojson")
@@ -180,7 +193,6 @@ stadtgebiete_json = {
     "name":    stadtgebiete["name"].to_list(),
     "geometry":stadtgebiete["geometry"].to_list(),
     "id_str":  stadtgebiete["name"].to_list()
-
 }
 print("stadtgebiete_json",stadtgebiete_json)
 print("---------")
@@ -351,8 +363,50 @@ popup_interessante_punkte4 = folium.GeoJsonPopup(
     labels=True,
     )
 
+popup_tram_linie = folium.GeoJsonPopup(
+    fields=["name"],
+    localize=False,
+    labels=False,
+    
+    )
+
+popup_bus_linie = folium.GeoJsonPopup(
+    fields=["name"],
+    localize=False,
+    labels=False,
+    
+    )
+
+
 print("DOPPELTE")
 print(isochronen_df[isochronen_df.duplicated(keep=False)])
+
+
+print(bus_linien_plot["colour"])
+
+folium.GeoJson(bus_linien_plot,
+               name="Buslinien",
+               marker=folium.Circle(radius=40, fill_color="black", fill_opacity=0.6, color="black", weight=1),
+               popup=popup_bus_linie,
+               style_function=lambda feature: {
+                    #"fillColor": "blue",
+                    "color": feature["properties"]["colour"],
+                    "weight": 4,
+                    #"fillOpacity": 0.9
+                }
+               ).add_to(m)
+
+folium.GeoJson(tram_linien_plot,
+               name="Tramlinien",
+               marker=folium.Circle(radius=40, fill_color="black", fill_opacity=0.6, color="black", weight=1),
+               popup=popup_tram_linie,
+               style_function=lambda feature: {
+                    #"fillColor": "blue",
+                    "color": feature["properties"]["colour"],
+                    "weight": 4,
+                    #"fillOpacity": 0.9
+                }
+               ).add_to(m)
 
 
 folium.GeoJson(schule_plot,
